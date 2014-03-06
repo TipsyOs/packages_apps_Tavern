@@ -38,5 +38,17 @@
         android:defaultValue="0" />
   </PreferenceCategory>
 
+  <PreferenceCategory
+    android:title="@string/toast_title">
+
+    <ListPreference
+        android:key="toast_animation"
+        android:title="@string/toast_animation_title"
+        android:entries="@array/toast_animation_entries"
+        android:entryValues="@array/toast_animation_values"
+        android:persistent="false" />
+
+  </PreferenceCategory>
+
 </PreferenceScreen>
 
