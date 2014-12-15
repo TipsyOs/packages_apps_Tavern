@@ -27,4 +27,9 @@
             android:layout="@layout/preference_powermenu"
             android:title="@string/powermenu_category" />
 
+        <PreferenceScreen
+        android:key="animations"
+        android:fragment="com.gzr.tavern.fragments.Animations"
+        android:title="@string/animations" />
+
 </PreferenceScreen>
