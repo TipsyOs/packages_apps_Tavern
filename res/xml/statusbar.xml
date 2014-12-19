@@ -33,6 +33,12 @@
         android:layout="@layout/preference_systemui_tuner_qs"
         android:title="@string/quicksettings_category" />
 
+     <PreferenceScreen
+        android:key="traffic"
+        android:fragment="com.gzr.tavern.fragments.Traffic"
+        android:layout="@layout/preference_traffic"
+        android:title="@string/traffic_category" />
+
         <PreferenceScreen
         android:key="battery_bar"
         android:fragment="com.gzr.tavern.fragments.BatteryBar"
