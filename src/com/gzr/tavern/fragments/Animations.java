@@ -67,6 +67,7 @@ import com.android.settings.R;
         private static final String WALLPAPER_CLOSE = "wallpaper_close";
         private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
         private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
+        private static final String TASK_OPEN_BEHIND = "task_open_behind";
         private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
         private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
         private static final String KEY_TOAST_ANIMATION = "toast_animation";
@@ -81,6 +82,7 @@ import com.android.settings.R;
         ListPreference mWallpaperClose;
         ListPreference mWallpaperIntraOpen;
         ListPreference mWallpaperIntraClose;
+        ListPreference mTaskOpenBehind;
         /*
         SwitchPreference mAnimNoOverride;
         */
@@ -182,6 +184,12 @@ import com.android.settings.R;
             mWallpaperIntraClose.setEntries(mAnimationsStrings);
             mWallpaperIntraClose.setEntryValues(mAnimationsNum);
 
+            mTaskOpenBehind = (ListPreference) findPreference(TASK_OPEN_BEHIND);
+            mTaskOpenBehind.setOnPreferenceChangeListener(this);
+            mTaskOpenBehind.setSummary(getProperSummary(mTaskOpenBehind));
+            mTaskOpenBehind.setEntries(mAnimationsStrings);
+            mTaskOpenBehind.setEntryValues(mAnimationsNum);
+
             // ListView Animations
             mListViewAnimation = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_ANIMATION);
             int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
@@ -278,6 +286,10 @@ import com.android.settings.R;
                 int val = Integer.parseInt((String) newValue);
                 result = Settings.System.putInt(getActivity().getContentResolver(),
                         Settings.System.ACTIVITY_ANIMATION_CONTROLS[9], val);
+            } else if (preference == mTaskOpenBehind) {
+                int val = Integer.parseInt((String) newValue);
+                result = Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.ACTIVITY_ANIMATION_CONTROLS[10], val);
             } else if (KEY_LISTVIEW_ANIMATION.equals(key)) {
                 int value = Integer.parseInt((String) newValue);
                 int index = mListViewAnimation.findIndexOfValue((String) newValue);
@@ -331,12 +343,8 @@ import com.android.settings.R;
                 mString = Settings.System.ACTIVITY_ANIMATION_CONTROLS[8];
             } else if (preference == mWallpaperIntraClose) {
                 mString = Settings.System.ACTIVITY_ANIMATION_CONTROLS[9];
-            } else if (preference == mListViewAnimation) {
+            } else if (preference == mTaskOpenBehind) {
                 mString = Settings.System.ACTIVITY_ANIMATION_CONTROLS[10];
-            } else if (preference == mListViewInterpolator) {
-                mString = Settings.System.ACTIVITY_ANIMATION_CONTROLS[11];
-            } else if (preference == mToastAnimation) {
-                mString = Settings.System.ACTIVITY_ANIMATION_CONTROLS[12];
             }
 
             int mNum = Settings.System.getInt(getActivity().getContentResolver(), mString, 0);
