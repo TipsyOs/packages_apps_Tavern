@@ -27,6 +27,7 @@
     <string name="button_settings">Button settings</string>
     <string name="quicksettings_category">Quick settings</string>
     <string name="traffic_category">Traffic indicators</string>
+    <string name="statusbar_notifications_category">Notifications</string>
 
     <!-- Dialog -->
     <string name="tavern_dialog_title">Coming Soon!!</string>
@@ -417,5 +418,9 @@
     <string name="text_charging_symbol_default">Disabled</string>
     <string name="text_charging_symbol_flash">Flash</string>
     <string name="text_charging_symbol_tilde">Tilde</string>
+
+    <!-- Notification Count in Statusbar -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
 </resources>
