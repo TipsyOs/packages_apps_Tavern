@@ -22,6 +22,7 @@
     <string name="statusbar_category">Status Bar</string>
     <string name="navigation_category">Navigation</string>
     <string name="multitasking_category">Multi-Tasking</string>
+    <string name="button_settings">Button settings</string>
 
     <!-- Dialog -->
     <string name="tavern_dialog_title">Coming Soon!!</string>
@@ -174,5 +175,9 @@
     <!-- Disable animations -->
     <string name="disable_animations">Disable animations</string>
     <string name="disable_animations_summary">Disables transition animations such as when launching an app</string>
+
+    <!-- Volume Key Rotation -->
+    <string name="swap_volume_buttons_title">Reorient</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
 </resources>
