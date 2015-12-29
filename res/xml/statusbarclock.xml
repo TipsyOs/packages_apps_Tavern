@@ -52,5 +52,10 @@
             android:entryValues="@array/clock_date_format_entries_values"
             android:dependency="clock_date_display" />
 
+        <com.gzr.tavern.preference.SystemSettingSwitchPreference
+            android:key="clock_use_second"
+            android:title="@string/status_bar_show_clock_second_title"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
 
