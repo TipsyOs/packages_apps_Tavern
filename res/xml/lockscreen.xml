@@ -32,4 +32,10 @@
             android:layout="@layout/preference_tap_to_sleep" />
             
 
+     <PreferenceScreen
+            android:key="lock_clock_fonts"
+            android:title="@string/lock_screen_font_title"
+            android:fragment="com.gzr.tavern.fragments.LockClockFonts"
+            android:layout="@layout/preference_lock_clock_fonts" />
+
 </PreferenceScreen>
