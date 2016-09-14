@@ -108,5 +108,11 @@
 
   </PreferenceCategory>
 
+    <com.gzr.tavern.preference.SystemSettingSwitchPreference
+        android:key="disable_transition_animations"
+        android:title="@string/disable_animations"
+        android:summary="@string/disable_animations_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 
