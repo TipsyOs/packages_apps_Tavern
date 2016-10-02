@@ -46,10 +46,10 @@
         android:title="@string/traffic_category" />
 
      <PreferenceScreen
-            android:key="statusbar_notifications"
-            android:fragment="com.gzr.tavern.fragments.StatusbarNotifications"
-            android:layout="@layout/preference_statusbar_notifications"
-            android:title="@string/statusbar_notifications_category" />
+        android:key="statusbar_notifications"
+        android:fragment="com.gzr.tavern.fragments.StatusbarNotifications"
+        android:layout="@layout/preference_statusbar_notifications"
+        android:title="@string/statusbar_notifications_category" />
 
         <PreferenceScreen
         android:key="battery_bar"
