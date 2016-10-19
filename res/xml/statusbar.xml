@@ -73,4 +73,9 @@
            android:summary="@string/double_tap_to_sleep_summary"
            android:defaultValue="true" />
 
+     <PreferenceScreen
+        android:key="carrier_label_settings"
+        android:fragment="com.gzr.tipsy.fragments.CarrierLabelSettings"
+        android:title="@string/carrier_label_settings_title" />
+
 </PreferenceScreen>
