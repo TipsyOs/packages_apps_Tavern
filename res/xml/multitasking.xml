@@ -31,5 +31,11 @@
         android:layout="@layout/circle_bar_icon"
         android:title="@string/app_circle_bar_title" />
 
+    <PreferenceScreen
+            android:key="screenshot_type"
+            android:title="@string/screenshot_type_category"
+            android:fragment="com.gzr.tavern.fragments.Screenshot"
+            android:layout="@layout/preference_screenshot"/>
+
 </PreferenceScreen>
 
