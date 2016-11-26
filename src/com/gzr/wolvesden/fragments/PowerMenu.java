@@ -59,7 +59,7 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
 
         mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
         mPowermenuTorch.setOnPreferenceChangeListener(this);
-        if (!DuUtils.deviceSupportsFlashLight(getActivity())) {
+        if (!ValidusUtils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(mPowermenuTorch);
         } else {
         mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
