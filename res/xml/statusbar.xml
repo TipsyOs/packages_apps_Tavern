@@ -23,7 +23,7 @@
 
     <Preference
        android:key="statusbar_notifications"
-       android:fragment="com.gzt.wolvesden.fragments.StatusbarNotifications"
+       android:fragment="com.gzr.wolvesden.fragments.StatusbarNotifications"
        android:title="@string/statusbar_notifications_category" />
 
     <com.android.settings.preference.SystemSettingSwitchPreference
