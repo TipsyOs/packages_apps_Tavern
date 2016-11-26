@@ -23,6 +23,9 @@
     <string name="navigation_category">Navigation</string>
     <string name="multitasking_category">Multi-Tasking</string>
 
+    <!-- Categories -->
+    <string name="statusbar_notifications_category">Notifications</string>
+
     <!-- Dialog -->
     <string name="wolvesden_dialog_title">Coming Soon!!</string>
     <string name="wolvesden_dialog_message">Under Construction</string>
@@ -45,5 +48,9 @@
     <string name="advanced_reboot_disabled">Disable</string>
     <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
     <string name="advanced_reboot_show_always">Show always</string>
+
+    <!-- Notification Count in Statusbar -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
 </resources>

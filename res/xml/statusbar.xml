@@ -21,4 +21,9 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+         <Preference
+            android:key="statusbar_notifications"
+            android:fragment="com.gzt.wolvesden.fragments.StatusbarNotifications"
+            android:title="@string/statusbar_notifications_category" />
+
 </PreferenceScreen>
