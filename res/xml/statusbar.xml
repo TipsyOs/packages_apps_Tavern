@@ -21,9 +21,20 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-         <Preference
-            android:key="statusbar_notifications"
-            android:fragment="com.gzt.wolvesden.fragments.StatusbarNotifications"
-            android:title="@string/statusbar_notifications_category" />
+    <Preference
+       android:key="statusbar_notifications"
+       android:fragment="com.gzt.wolvesden.fragments.StatusbarNotifications"
+       android:title="@string/statusbar_notifications_category" />
+
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="force_expanded_notifications"
+        android:title="@string/force_expanded_notifications_title"
+        android:summary="@string/force_expanded_notifications_summary" />
+
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary"
+        android:persistent="false" />
 
 </PreferenceScreen>
