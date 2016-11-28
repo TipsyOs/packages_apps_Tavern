@@ -37,4 +37,9 @@
         android:summary="@string/disable_immersive_message_summary"
         android:persistent="false" />
 
+    <Preference
+        android:key="quicksettings"
+        android:fragment="com.gzr.wolvesden.fragments.QuickSettings"
+        android:title="@string/quicksettings_category" />
+
 </PreferenceScreen>
