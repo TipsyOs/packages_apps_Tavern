@@ -25,6 +25,7 @@
 
     <!-- Categories -->
     <string name="statusbar_notifications_category">Notifications</string>
+    <string name="recents_category">Recents</string>
 
     <!-- Dialog -->
     <string name="wolvesden_dialog_title">Coming Soon!!</string>
@@ -52,6 +53,15 @@
     <string name="advanced_reboot_disabled">Disable</string>
     <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
     <string name="advanced_reboot_show_always">Show always</string>
+
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_dialog_title">Select recents view</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
 
     <!-- Notification Count in Statusbar -->
     <string name="status_bar_notif_count_title">Show notification count</string>
