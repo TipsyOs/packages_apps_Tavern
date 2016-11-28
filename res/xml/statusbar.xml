@@ -42,4 +42,9 @@
         android:fragment="com.gzr.wolvesden.fragments.QuickSettings"
         android:title="@string/quicksettings_category" />
 
+    <Preference
+        android:key="traffic"
+        android:fragment="com.gzr.wolvesden.fragments.Traffic"
+        android:title="@string/traffic_category" />
+
 </PreferenceScreen>
