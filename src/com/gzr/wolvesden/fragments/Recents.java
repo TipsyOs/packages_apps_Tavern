@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gzr.dutweaks.wolvesden;
+package com.gzr.wolvesden.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;
