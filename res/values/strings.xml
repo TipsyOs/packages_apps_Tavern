@@ -24,6 +24,7 @@
     <string name="multitasking_category">Multi-Tasking</string>
 
     <!-- Categories -->
+    <string name="misctweaks_category">Miscellany</string>
     <string name="statusbar_notifications_category">Notifications</string>
     <string name="recents_category">Recents</string>
 
@@ -74,5 +75,13 @@
     <!-- Disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
     <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scrolling cache</string>
+    <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
+    <string name="pref_scrollingcache_force_enable">Force enable</string>
+    <string name="pref_scrollingcache_default_enable">Default enable</string>
+    <string name="pref_scrollingcache_default_disable">Default disable</string>
+    <string name="pref_scrollingcache_force_disable">Force disable</string>
 
 </resources>

@@ -21,6 +21,11 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+          <Preference
+            android:key="misctweaks"
+            android:fragment="com.gzr.wolvesden.fragments.MiscTweaks"
+            android:title="@string/misctweaks_category" />
+
          <Preference
             android:key="powermenu"
             android:fragment="com.gzr.wolvesden.fragments.PowerMenu"
