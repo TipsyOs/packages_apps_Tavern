@@ -14,6 +14,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_category" >
 
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="quick_settings_vibrate"
+        android:title="@string/quick_settings_vibrate_title"
+        android:summary="@string/quick_settings_vibrate_summary"
+        android:defaultValue="false"/>
+
     <ListPreference
         android:key="quick_pulldown"
         android:title="@string/quick_pulldown_title"
