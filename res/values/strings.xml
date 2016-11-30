@@ -25,6 +25,7 @@
 
     <!-- Categories -->
     <string name="misctweaks_category">Miscellany</string>
+    <string name="button_settings">Button settings</string>
     <string name="statusbar_notifications_category">Notifications</string>
     <string name="quicksettings_category">Quick settings</string>
     <string name="recents_category">Recents</string>
@@ -36,6 +37,14 @@
     <string name="wolvesden_dialog_title">Coming Soon!!</string>
     <string name="wolvesden_dialog_message">Under Construction</string>
     <string name="wolvesden_dialog_toast">READ!</string>
+
+    <!-- Do not disturb switch in volume panel -->
+    <string name="tuner_full_zen_title">Do not disturb switch</string>
+    <string name="tuner_full_zen_summary">Show a do not disturb switch in the volume panel</string>
+
+    <!-- Volume Key Rotation -->
+    <string name="swap_volume_buttons_title">Reorient</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Lockscreen torch</string>
