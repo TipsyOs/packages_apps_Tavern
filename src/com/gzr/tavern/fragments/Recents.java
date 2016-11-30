@@ -43,9 +43,19 @@ public class Recents extends SettingsPreferenceFragment implements OnPreferenceC
 
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String CATEGORY_STOCK_RECENTS = "stock_recents";
+    private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
+    private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
+    public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
+    public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN).setClassName(OMNISWITCH_PACKAGE_NAME,
+                                                    OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
+    private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
 
     private PreferenceCategory mStockRecents;
     private ListPreference mRecentsClearAllLocation;
+    private PreferenceCategory mOmniRecents;
+    private SwitchPreference mRecentsUseOmniSwitch;
+    private Preference mOmniSwitchSettings;
+    private boolean mOmniSwitchInitCalled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +67,22 @@ public class Recents extends SettingsPreferenceFragment implements OnPreferenceC
         PreferenceScreen prefSet = getPreferenceScreen();
 
         mStockRecents = (PreferenceCategory) findPreference(CATEGORY_STOCK_RECENTS);
+        mOmniRecents = (PreferenceCategory) findPreference(CATEGORY_OMNI_RECENTS);
+
+        mRecentsUseOmniSwitch = (SwitchPreference) prefSet.findPreference(RECENTS_USE_OMNISWITCH);
+        try {
+            mRecentsUseOmniSwitch.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.RECENTS_USE_OMNISWITCH) == 1);
+            mOmniSwitchInitCalled = true;
+        } catch(SettingNotFoundException e){
+            // if the settings value is unset
+        }
+        mRecentsUseOmniSwitch.setOnPreferenceChangeListener(this);
+
+        mOmniSwitchSettings = (Preference) prefSet.findPreference(OMNISWITCH_START_SETTINGS);
+        mOmniSwitchSettings.setEnabled(mRecentsUseOmniSwitch.isChecked());
+        updateRecents();
+
         // clear all location
         mRecentsClearAllLocation = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_LOCATION);
         int location = Settings.System.getIntForUser(resolver,
@@ -78,6 +104,10 @@ public class Recents extends SettingsPreferenceFragment implements OnPreferenceC
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mOmniSwitchSettings){
+            startActivity(INTENT_OMNISWITCH_SETTINGS);
+            return true;
+        }
         return super.onPreferenceTreeClick(preference);
     }
 
@@ -91,7 +121,43 @@ public class Recents extends SettingsPreferenceFragment implements OnPreferenceC
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
+       } else if (preference == mRecentsUseOmniSwitch) {
+            boolean value = (Boolean) newValue;
+
+            if (value && !mOmniSwitchInitCalled){
+                openOmniSwitchFirstTimeWarning();
+                mOmniSwitchInitCalled = true;
+            }
+
+            Settings.System.putInt(
+                    resolver, Settings.System.RECENTS_USE_OMNISWITCH, value ? 1 : 0);
+            mOmniSwitchSettings.setEnabled(value);
+            updateRecents();
+            return true;
         }
         return false;
+    }
+
+    private void openOmniSwitchFirstTimeWarning() {
+        new AlertDialog.Builder(getActivity())
+            .setTitle(getResources().getString(R.string.omniswitch_first_time_title))
+            .setMessage(getResources().getString(R.string.omniswitch_first_time_message))
+            .setNegativeButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+            }
+        }).show();
+    }
+
+    private void updateRecents() {
+        boolean omniRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1;
+
+        if (omniRecents) {
+            mOmniRecents.setEnabled(true);
+            mStockRecents.setEnabled(false);
+        } else {
+            mOmniRecents.setEnabled(true);
+            mStockRecents.setEnabled(true);
+        }
     }
 }
