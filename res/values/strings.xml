@@ -30,6 +30,7 @@
     <string name="recents_category">Recents</string>
     <string name="traffic_category">Traffic indicators</string>
     <string name="breathing_notifications_category">Breathing Notifications</string>
+    <string name="omniswitch_category">OmniSwitch</string>
 
     <!-- Dialog -->
     <string name="wolvesden_dialog_title">Coming Soon!!</string>
@@ -39,6 +40,16 @@
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Lockscreen torch</string>
     <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
+
+    <!-- OmniSwitch Recents -->
+    <string name="aosp_recents_title">AOSP recents</string>
+    <string name="omniswitch_recents_title">OmniSwitch recents</string>
+    <string name="recents_use_omniswitch_title">Use for a recents alterative</string>
+    <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of the default recents view</string>
+    <string name="omniswitch_start_settings_title">OmniSwitch settings</string>
+    <string name="omniswitch_start_settings_summary">View the settings for OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Warning</string>
+    <string name="omniswitch_first_time_message">If using OmniSwitch as recents alterative, make sure you have OmniSwitch enabled</string>
 
     <!-- Power Menu -->
     <string name="powermenu_category">Power Menu</string>
