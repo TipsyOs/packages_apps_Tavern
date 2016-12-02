@@ -18,6 +18,7 @@
 <resources>
 
     <dimen name="header_icon_width">28dp</dimen>
+    <dimen name="fab_line_width">2dp</dimen>
 
     <!-- navbar height -->
     <integer name="navigation_bar_height_min_percent">65</integer>

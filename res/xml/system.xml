@@ -22,6 +22,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
           <Preference
+            android:key="expanded_desktop"
+            android:fragment="com.gzr.wolvesden.fragments.ExpandedDesktop"
+            android:title="@string/expanded_desktop_category" />
+
+         <Preference
             android:key="misctweaks"
             android:fragment="com.gzr.wolvesden.fragments.MiscTweaks"
             android:title="@string/misctweaks_category" />
