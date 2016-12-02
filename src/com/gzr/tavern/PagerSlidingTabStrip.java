@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gzr.wolvesden;
+package com.gzr.tavern;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

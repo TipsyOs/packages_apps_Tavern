@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.gzr.wolvesden.preference;
+package com.gzr.tavern.preference;
 
 import android.content.Context;
 import android.support.v7.preference.CheckBoxPreference;
 import android.provider.Settings;
 import android.util.AttributeSet;
 
-public class SecureCheckBoxPreference extends CheckBoxPreference {
-    public SecureCheckBoxPreference(Context context, AttributeSet attrs, int defStyle) {
+public class SystemCheckBoxPreference extends CheckBoxPreference {
+    public SystemCheckBoxPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public SecureCheckBoxPreference(Context context, AttributeSet attrs) {
+    public SystemCheckBoxPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SecureCheckBoxPreference(Context context) {
+    public SystemCheckBoxPreference(Context context) {
         super(context, null);
     }
 
@@ -42,7 +42,7 @@ public class SecureCheckBoxPreference extends CheckBoxPreference {
                 return true;
             }
 
-            Settings.Secure.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
+            Settings.System.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
             return true;
         }
         return false;
@@ -54,7 +54,7 @@ public class SecureCheckBoxPreference extends CheckBoxPreference {
             return defaultReturnValue;
         }
 
-        return Settings.Secure.getInt(getContext().getContentResolver(),
+        return Settings.System.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }
 
@@ -62,6 +62,6 @@ public class SecureCheckBoxPreference extends CheckBoxPreference {
     protected boolean isPersisted() {
         // Using getString instead of getInt so we can simply check for null
         // instead of catching an exception. (All values are stored as strings.)
-        return Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
+        return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gzr.wolvesden.tabs;
+package com.gzr.tavern.tabs;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -49,7 +49,7 @@ public class System extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.WOLVESDEN;
+        return MetricsEvent.TAVERN;
     }
 
     @Override

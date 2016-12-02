@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gzr.wolvesden;
+package com.gzr.tavern;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -47,12 +47,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.gzr.wolvesden.tabs.System;
-import com.gzr.wolvesden.tabs.Lockscreen;
-import com.gzr.wolvesden.tabs.StatusBar;
-import com.gzr.wolvesden.tabs.Navigation;
-import com.gzr.wolvesden.tabs.MultiTasking;
-import com.gzr.wolvesden.PagerSlidingTabStrip;
+import com.gzr.tavern.tabs.System;
+import com.gzr.tavern.tabs.Lockscreen;
+import com.gzr.tavern.tabs.StatusBar;
+import com.gzr.tavern.tabs.Navigation;
+import com.gzr.tavern.tabs.MultiTasking;
+import com.gzr.tavern.PagerSlidingTabStrip;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
@@ -60,7 +60,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WolvesDen extends SettingsPreferenceFragment {
+public class Tavern extends SettingsPreferenceFragment {
 
     private static final int MENU_HELP  = 0;
 
@@ -74,7 +74,7 @@ public class WolvesDen extends SettingsPreferenceFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mContainer = container;
 
-        View view = inflater.inflate(R.layout.wolvesden, container, false);
+        View view = inflater.inflate(R.layout.tavern, container, false);
         mViewPager = (ViewPager) view.findViewById(R.id.pager);
         mTabs = (PagerSlidingTabStrip) view.findViewById(R.id.tabs);
         StatusBarAdapter StatusBarAdapter = new StatusBarAdapter(getFragmentManager());
@@ -97,7 +97,7 @@ public class WolvesDen extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.WOLVESDEN;
+        return MetricsEvent.TAVERN;
     }
 
     @Override
@@ -108,8 +108,8 @@ public class WolvesDen extends SettingsPreferenceFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.add(0, MENU_HELP, 0, R.string.wolvesden_dialog_title)
-                .setIcon(R.drawable.ic_wolvesden_info)
+        menu.add(0, MENU_HELP, 0, R.string.tavern_dialog_title)
+                .setIcon(R.drawable.ic_tavern_info)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
@@ -119,7 +119,7 @@ public class WolvesDen extends SettingsPreferenceFragment {
             case MENU_HELP:
                 showDialogInner(MENU_HELP);
                 Toast.makeText(getActivity(),
-                (R.string.wolvesden_dialog_toast),
+                (R.string.tavern_dialog_toast),
                 Toast.LENGTH_LONG).show();
                 return true;
             default:
@@ -148,8 +148,8 @@ public class WolvesDen extends SettingsPreferenceFragment {
             switch (id) {
                 case MENU_HELP:
                     return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.wolvesden_dialog_title)
-                    .setMessage(R.string.wolvesden_dialog_message)
+                    .setTitle(R.string.tavern_dialog_title)
+                    .setMessage(R.string.tavern_dialog_message)
                     .setCancelable(false)
                     .setNegativeButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
