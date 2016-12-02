@@ -36,6 +36,11 @@
         android:title="@string/status_bar_clock" />
 
     <Preference
+        android:key="carrier_label"
+        android:fragment="com.gzr.wolvesden.fragments.CarrierLabel"
+        android:title="@string/carrier_label_category" />
+
+    <Preference
        android:key="statusbar_notifications"
        android:fragment="com.gzr.wolvesden.fragments.StatusbarNotifications"
        android:title="@string/statusbar_notifications_category" />
