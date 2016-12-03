@@ -13,7 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.gzr.teslacoil.fragments;
+package com.gzr.tavern.fragments;
 
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -64,7 +64,7 @@ public class StatusBarClock extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.TESLACOIL;
+        return MetricsEvent.TAVERN;
     }
 
     @Override
