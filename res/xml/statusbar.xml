@@ -23,7 +23,7 @@
 
     <PreferenceScreen
         android:key="statusbarclock"
-        android:fragment="com.gzr.teslacoil.fragments.StatusBarClock"
+        android:fragment="com.gzr.tavern.fragments.StatusBarClock"
         android:title="@string/status_bar_clock_title"
         android:layout="@layout/preference_statusbarclock" />
 
