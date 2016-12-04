@@ -59,6 +59,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
     private static final String PREF_COLUMNS = "qs_columns";
     private static final String KEY_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
+    private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
@@ -68,6 +69,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private CustomSeekBarPreference mRowsLandscape;
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mSysuiQqsCount;
+    private SwitchPreference mLockQsDisabled;
+
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,6 +81,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
 
         int defaultValue;
 
@@ -136,6 +141,15 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                 Settings.Secure.QQS_COUNT, 5);
         mSysuiQqsCount.setValue(SysuiQqsCount / 1);
         mSysuiQqsCount.setOnPreferenceChangeListener(this);
+
+        mLockQsDisabled = (SwitchPreference) findPreference(PREF_LOCK_QS_DISABLED);
+        if (lockPatternUtils.isSecure(MY_USER_ID)) {
+            mLockQsDisabled.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.LOCK_QS_DISABLED, 0) == 1));
+            mLockQsDisabled.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mLockQsDisabled);
+        }
     }
 
     @Override
@@ -198,6 +212,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             int SysuiQqsCount = (Integer) objValue;
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
+            return true;
+        } else if  (preference == mLockQsDisabled) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.LOCK_QS_DISABLED, checked ? 1:0);
             return true;
         }
         return false;
