@@ -52,6 +52,10 @@
     <string name="volume_rocker_music_controls_title">Playback control</string>
     <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
 
+    <!-- Volume key controls media stream -->
+    <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
+    <string name="volume_keys_control_media_stream_summary">Force volume keys to control media stream</string>
+
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Lockscreen torch</string>
     <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
