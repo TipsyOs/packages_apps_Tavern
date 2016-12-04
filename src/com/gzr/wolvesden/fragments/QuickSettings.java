@@ -157,7 +157,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
 
         mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
         mQsDataAdvanced.setOnPreferenceChangeListener(this);
-        if (DuUtils.isWifiOnly(getActivity())) {
+        if (ValidusUtils.isWifiOnly(getActivity())) {
             prefSet.removePreference(mQsDataAdvanced);
         } else {
         mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
