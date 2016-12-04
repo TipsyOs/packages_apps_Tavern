@@ -27,6 +27,7 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
@@ -44,6 +45,7 @@ import android.view.View;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.util.validus.ValidusUtils;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.Utils;
 
@@ -60,6 +62,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_COLUMNS = "qs_columns";
     private static final String KEY_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
     private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
+    private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
@@ -70,6 +73,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mSysuiQqsCount;
     private SwitchPreference mLockQsDisabled;
+    private SwitchPreference mQsDataAdvanced;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -150,6 +154,15 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         } else {
             prefSet.removePreference(mLockQsDisabled);
         }
+
+        mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
+        mQsDataAdvanced.setOnPreferenceChangeListener(this);
+        if (DuUtils.isWifiOnly(getActivity())) {
+            prefSet.removePreference(mQsDataAdvanced);
+        } else {
+        mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_DATA_ADVANCED, 0) == 1));
+        }
     }
 
     @Override
@@ -217,6 +230,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.LOCK_QS_DISABLED, checked ? 1:0);
+            return true;
+        } else if  (preference == mQsDataAdvanced) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QS_DATA_ADVANCED, checked ? 1:0);
             return true;
         }
         return false;
