@@ -27,4 +27,9 @@
         android:title="@string/status_bar_clock_title"
         android:layout="@layout/preference_statusbarclock" />
 
+        <PreferenceScreen
+        android:key="battery_bar"
+        android:fragment="com.gzr.tavern.fragments.BatteryBar"
+        android:title="@string/battery_bar" />
+
 </PreferenceScreen>
