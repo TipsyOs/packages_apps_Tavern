@@ -28,8 +28,7 @@
         android:defaultValue="false" />
   
     <PreferenceScreen
-        android:title="@string/lockscreen_targets_title"
-        android:layout="@layout/preference_lockscreen_shortcuts" >
+        android:title="@string/lockscreen_targets_title">
         <intent
            android:targetPackage="com.android.systemui"
            android:targetClass="com.android.systemui.validus.LockscreenShortcutsActivity" />
