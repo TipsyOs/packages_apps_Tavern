@@ -33,12 +33,6 @@
     <string name="recents_category">Recents</string>
     <string name="lock_items_category">Lockscreen items</string>
 
-    <!-- Dialog -->
-    <string name="tavern_dialog_title">Coming Soon!!</string>
-    <string name="tavern_dialog_message">Under Construction</string>
-    <string name="tavern_dialog_toast">READ!</string>
-
-
     <!-- OmniSwitch Recents -->
     <string name="aosp_recents_title">AOSP recents</string>
     <string name="omniswitch_recents_title">OmniSwitch recents</string>
