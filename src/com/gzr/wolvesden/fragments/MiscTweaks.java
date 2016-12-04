@@ -38,11 +38,13 @@ import com.android.settings.Utils;
 
 public class MiscTweaks extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
+    private static final String SCREENSHOT_TYPE = "screenshot_type";
     private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
     private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
 
+    private ListPreference mScreenshotType;
     private ListPreference mScrollingCachePref;
     private ListPreference mMsob;
 
@@ -59,6 +61,13 @@ public class MiscTweaks extends SettingsPreferenceFragment implements OnPreferen
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+        mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
+        int mScreenshotTypeValue = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SCREENSHOT_TYPE, 0);
+        mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+        mScreenshotType.setSummary(mScreenshotType.getEntry());
+        mScreenshotType.setOnPreferenceChangeListener(this);
 
         mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
         mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
@@ -90,6 +99,14 @@ public class MiscTweaks extends SettingsPreferenceFragment implements OnPreferen
                     Integer.valueOf(String.valueOf(newValue)));
             mMsob.setValue(String.valueOf(newValue));
             mMsob.setSummary(mMsob.getEntry());
+            return true;
+        } else if  (preference == mScreenshotType) {
+            int mScreenshotTypeValue = Integer.parseInt(((String) newValue).toString());
+            mScreenshotType.setSummary(
+                    mScreenshotType.getEntries()[mScreenshotTypeValue]);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
+            mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
             return true;
         }
         return false;
