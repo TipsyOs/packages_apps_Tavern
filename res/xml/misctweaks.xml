@@ -15,12 +15,6 @@
     android:title="@string/misctweaks_category" >
 
         <ListPreference
-            android:entries="@array/screenshot_type_entries"
-            android:entryValues="@array/screenshot_type_values"
-            android:key="screenshot_type"
-            android:title="@string/screenshot_type_title" />
-
-        <ListPreference
             android:key="pref_scrollingcache"
             android:dialogTitle="@string/pref_scrollingcache_title"
             android:title="@string/pref_scrollingcache_title"
@@ -34,5 +28,27 @@
             android:entries="@array/media_scanner_on_boot_entries"
             android:entryValues="@array/media_scanner_on_boot_values"
             android:persistent="false" />
+
+        <PreferenceCategory
+            android:key="screenshot_options"
+            android:title="@string/screenshot_options_category" >
+
+        <ListPreference
+            android:entries="@array/screenshot_type_entries"
+            android:entryValues="@array/screenshot_type_values"
+            android:key="screenshot_type"
+            android:title="@string/screenshot_type_title" />
+
+        <com.gzr.wolvesden.preference.CustomSeekBarPreference
+            android:key="screenshot_delay"
+            android:title="@string/screenshot_delay_title"
+            android:summary="@string/screenshot_delay_summary"
+            settings:max="10000"
+            settings:min="100"
+            settings:interval="100"
+            settings:units="ms"
+            android:persistent="false" />
+
+        </PreferenceCategory>
 
 </PreferenceScreen>
