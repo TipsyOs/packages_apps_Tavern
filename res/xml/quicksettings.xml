@@ -14,12 +14,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_category" >
 
-     <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
         android:key="lockscreen_qs_disabled"
         android:title="@string/lockscreen_qs_disabled_title"
         android:summary="@string/lockscreen_qs_disabled_summary"/>
 
-     <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
         android:summary="@string/qs_brightness_slider_summary"
@@ -30,6 +30,23 @@
         android:title="@string/brightness_icon_title"
         android:summary="@string/brightness_icon_summary"
         android:dependency="qs_show_brightness"
+        android:defaultValue="false"/>
+
+    <ListPreference
+        android:key="quick_pulldown"
+        android:title="@string/quick_pulldown_title"
+        android:entries="@array/quick_pulldown_entries"
+        android:entryValues="@array/quick_pulldown_values"
+        android:persistent="false" />
+
+    <PreferenceCategory
+        android:key="qs_tiles_category"
+        android:title="@string/qs_tiles_category">
+
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="music_tile_title"
+        android:title="@string/qs_music_tile_track_optional_title"
+        android:summary="@string/qs_music_tile_track_optional_summary"
         android:defaultValue="false"/>
 
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
@@ -44,12 +61,7 @@
         android:summary="@string/qs_advanced_data_summary"
         android:defaultValue="false" />
 
-    <ListPreference
-        android:key="quick_pulldown"
-        android:title="@string/quick_pulldown_title"
-        android:entries="@array/quick_pulldown_entries"
-        android:entryValues="@array/quick_pulldown_values"
-        android:persistent="false" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="qs_layout_category"
