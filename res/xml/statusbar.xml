@@ -30,6 +30,12 @@
             android:targetClass="com.android.systemui.tuner.TunerActivity" />
      </PreferenceScreen>
 
+     <PreferenceScreen
+        android:key="status_bar_battery_style"
+        android:title="@string/status_bar_battery_style_category"
+        android:layout="@layout/preference_battery_style"
+        android:fragment="com.gzr.wolvesden.fragments.StatusbarBatteryStyle" />
+
      <Preference
         android:key="statusbarclock"
         android:fragment="com.gzr.wolvesden.fragments.StatusbarClock"
