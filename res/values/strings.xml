@@ -96,4 +96,8 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
+
 </resources>
