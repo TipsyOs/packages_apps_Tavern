@@ -28,11 +28,12 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
@@ -42,12 +43,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import com.android.internal.util.crdroid.AwesomeAnimationHelper;
+import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 
+import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 
-    public class Animations extends PreferenceFragment implements
+    public class Animations extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
         private static final String TAG = "Animations";
@@ -98,12 +101,11 @@ import com.android.settings.R;
             createCustomView();
         }
 
-        private PreferenceScreen createCustomView() {
-            mContext = getActivity();
+        private void createCustomView() {
+            mContext = getActivity().getApplicationContext();
             ContentResolver resolver = getActivity().getContentResolver();
 
             addPreferencesFromResource(R.xml.animations);
-            PreferenceScreen prefSet = getPreferenceScreen();
 
             // System Animations
             mAnimations = AwesomeAnimationHelper.getAnimationsList();
@@ -182,14 +184,14 @@ import com.android.settings.R;
             mTaskOpenBehind.setEntryValues(mAnimationsNum);
 
             // ListView Animations
-            mListViewAnimation = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_ANIMATION);
+            mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
             int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.LISTVIEW_ANIMATION, 0);
             mListViewAnimation.setValue(String.valueOf(listviewanimation));
             mListViewAnimation.setSummary(mListViewAnimation.getEntry());
             mListViewAnimation.setOnPreferenceChangeListener(this);
 
-            mListViewInterpolator = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_INTERPOLATOR);
+            mListViewInterpolator = (ListPreference) findPreference(KEY_LISTVIEW_INTERPOLATOR);
             int listviewinterpolator = Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.LISTVIEW_INTERPOLATOR, 0);
             mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
@@ -207,12 +209,12 @@ import com.android.settings.R;
             mToastAnimation.setOnPreferenceChangeListener(this);
 
             // Scrolling cache
-            mScrollingCachePref = (ListPreference) prefSet.findPreference(SCROLLINGCACHE_PREF);
+            mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
 
-            return prefSet;
+            return;
         }
 
         @Override
@@ -225,10 +227,9 @@ import com.android.settings.R;
             super.onResume();
         }
 
-        @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
 
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            return false;
         }
 
         @Override
@@ -345,6 +346,11 @@ import com.android.settings.R;
 
             int mNum = Settings.System.getInt(getActivity().getContentResolver(), mString, 0);
             return mAnimationsStrings[mNum];
+        }
+
+        @Override
+        protected int getMetricsCategory() {
+            return MetricsEvent.TAVERN;
         }
 
     }
