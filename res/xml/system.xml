@@ -30,6 +30,7 @@
         <PreferenceScreen
         android:key="animations"
         android:fragment="com.gzr.tavern.fragments.Animations"
+        android:layout="@layout/preference_animations"
         android:title="@string/animations" />
 
 </PreferenceScreen>
