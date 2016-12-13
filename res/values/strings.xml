@@ -38,4 +38,6 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <string name="qs_small_tiles_title">Small QS tiles</string>
+
 </resources>
