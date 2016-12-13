@@ -42,6 +42,7 @@
         <PreferenceScreen
         android:key="battery_bar"
         android:fragment="com.gzr.tavern.fragments.BatteryBar"
+        android:layout="@layout/preference_batterybar"
         android:title="@string/battery_bar" />
 
     <com.android.settings.preference.SystemSettingSwitchPreference
