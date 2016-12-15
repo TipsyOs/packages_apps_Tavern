@@ -12,8 +12,9 @@
 -->
 
 <PreferenceScreen
+    android:title="@string/status_bar_clock"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/status_bar_clock">
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <SwitchPreference
         android:key="status_bar_show_clock"
@@ -55,6 +56,14 @@
         android:entryValues="@array/clock_date_style_values"
         android:dependency="status_bar_show_clock" />
 
+    <com.gzr.wolvesden.preference.CustomSeekBarPreference
+        android:key="statusbar_clock_font_size"
+        android:title="@string/clock_font_size_title"
+        android:max="23"
+        settings:min="4"
+        settings:units="dp"
+        android:persistent="false" />
+
     <ListPreference
         android:key="clock_date_position"
         android:title="@string/clock_date_position"
@@ -68,5 +77,12 @@
         android:entries="@array/clock_date_format_entries_values"
         android:entryValues="@array/clock_date_format_entries_values"
         android:dependency="status_bar_show_clock" />
+
+    <ListPreference
+        android:key="statusbar_clock_font_style"
+        android:title="@string/clock_font_style_title"
+        android:entries="@array/clock_font_style_entries"
+        android:entryValues="@array/clock_font_style_values"
+        android:persistent="false" />
 
 </PreferenceScreen>
