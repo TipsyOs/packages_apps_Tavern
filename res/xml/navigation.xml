@@ -30,4 +30,10 @@
         android:key="navigation_options"
         android:fragment="com.gzr.wolvesden.fragments.NavbarSettings"
         android:title="@string/navigationbar_settings_title" />
+
+    <Preference
+        android:key="pa_pie_control"
+        android:title="@string/pa_pie_control_title"
+        android:fragment="com.gzr.wolvesden.fragments.PieControl" />
+
 </PreferenceScreen>
