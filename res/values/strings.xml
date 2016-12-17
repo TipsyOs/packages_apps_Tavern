@@ -173,7 +173,7 @@
 
     <!-- QS tiles category -->
     <string name="qs_tiles_category">QS tile options</string>
-    <string name="qs_advanced_data_title">Advanced data tile</string>
+    <string name="qs_advanced_data_title">Data easy toggle</string>
     <string name="qs_advanced_data_summary">Enable one tap action to enable or disable data</string>
     <string name="qs_music_tile_track_optional_title">Music tile track title</string>
     <string name="qs_music_tile_track_optional_summary">Show the music track title as the QS tile title</string>
@@ -182,6 +182,14 @@
     <string name="qs_tile_title_visibility_title">QS tile titles</string>
     <string name="qs_tile_title_visibility_summary_on">QS tiles titles are now visible</string>
     <string name="qs_tile_title_visibility_summary_off">QS tiles titles are now gone</string>
+
+    <!-- WiFi easy toggle  -->
+    <string name="qs_wifi_easy_toggle_title">WiFi easy toggle</string>
+    <string name="qs_wifi_easy_toggle_summary">Enable one tap action to enable or disable wifi</string>
+
+    <!-- BT easy toggle  -->
+    <string name="qs_bt_easy_toggle_title">Bluetooth easy toggle</string>
+    <string name="qs_bt_easy_toggle_summary">Enable one tap action to enable or disable bluetooth</string>
 
     <!-- Tiles animation style  -->
     <string name="quicksettings_tiles_category">Tile animation options</string>
