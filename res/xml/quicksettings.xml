@@ -43,7 +43,7 @@
         android:key="qs_tiles_category"
         android:title="@string/qs_tiles_category">
 
-    <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:summaryOn="@string/qs_tile_title_visibility_summary_on"

@@ -657,4 +657,8 @@
     <string name="pa_pie_button_color_title">Buttons Color</string>
     <string name="pa_pie_always_right_title">Pie always on the right</string>
     <string name="pa_pie_always_right_summary">Pie will be always shown on the right while in landscape</string>
+
+    <string name="nav_bar_dynamic_title">Dyanamic navbar color</string>
+    <string name="nav_bar_dynamic_summary">Enable disable this swicth for navbar to adapt to apps primary dark color.Restart your desired app to see effect</string>
+
 </resources>
