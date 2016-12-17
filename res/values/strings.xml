@@ -57,7 +57,7 @@
     <string name="daynight_header_title">Theme resources</string>
 
     <!-- Sound & display settings screen, setting option name to change the user interface theme [CHAR LIMIT=30] -->
-    <string name="night_mode_title">Theme resources</string>
+    <string name="night_mode_title">Project theme</string>
     <!-- Sound & display settings screen, setting option summary to change the user interface theme [CHAR LIMIT=100] -->
     <string name="night_mode_summary">%s</string>
     <!-- Sound & display settings screen, theme setting value to prefer a light-colored user interface [CHAR LIMIT=30] -->
