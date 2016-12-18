@@ -35,9 +35,11 @@
     <!-- Tabs -->
     <string name="system_category">System</string>
     <string name="lockscreen_category">Lockscreen</string>
+    <string name="heads_up_category">Heads up</string>
     <string name="statusbar_category">Status Bar</string>
     <string name="navigation_category">Navigation</string>
     <string name="multitasking_category">Multi-Tasking</string>
+    <string name="statusbar_notifications_category">Statusbar notifications</string>
 
     <!-- Categories -->
     <string name="misctweaks_category">Miscellany</string>
@@ -661,4 +663,32 @@
     <string name="nav_bar_dynamic_title">Dyanamic navbar color</string>
     <string name="nav_bar_dynamic_summary">Enable disable this swicth for navbar to adapt to apps primary dark color.Restart your desired app to see effect</string>
 
+    <!-- Heads up settings -->
+    <string name="heads_up_notifications">Heads up</string>
+    <string name="headsup_settings_title">Peeking notifications</string>
+    <string name="summary_heads_up_enabled">Peeking notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Peeking notifications are disabled</string>
+    <string name="heads_up_disabled_notice">To allow applications to display interactive notifications in a pop-up window on your screen, enable Peeking notifications.</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Peeking notifications will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_5sec">5 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary_one_minute">Swiping up on peeking notifications will snooze heads up from that application for 1 minute</string>
+    <string name="heads_up_snooze_summary">Swiping up on peeking notifications will snooze heads up from that application for <xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
+    <string name="heads_up_snooze_1min">1 minute</string>
+    <string name="heads_up_snooze_3min">3 minutes</string>
+    <string name="heads_up_snooze_5min">5 minutes</string>
+    <string name="heads_up_snooze_10min">10 minutes</string>
+    <string name="heads_up_snooze_15min">15 minutes</string>
+    <string name="heads_up_snooze_20min">20 minutes</string>
 </resources>
