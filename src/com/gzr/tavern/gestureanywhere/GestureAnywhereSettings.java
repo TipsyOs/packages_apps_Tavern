@@ -71,7 +71,7 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
 
         mTriggerWidthPref = (ListPreference) findPreference(KEY_TRIGGER_WIDTH);
         int Width = Settings.System.getInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, 10);
+                Settings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, 40);
         mTriggerWidthPref.setOnPreferenceChangeListener(this);
         mTriggerWidthPref.setValue(String.valueOf(Width));
         mTriggerWidthPref.setSummary(mTriggerWidthPref.getEntry());
