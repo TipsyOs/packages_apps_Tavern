@@ -21,11 +21,30 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory 
+         android:title="@string/lockscreen_gestures_category">
+
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="keyguard_toggle_torch"
         android:title="@string/keyguard_torch_title"
         android:summary="@string/keyguard_torch_summary"
         android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+         android:title="@string/lockscreen_shortcuts_category">
+
+        <PreferenceScreen
+            android:key="lockscreen_shortcuts"
+            android:fragment="com.gzr.wolvesden.fragments.ActionListViewSettings"
+            android:summary="@string/lockscreen_shortcuts_summary"
+            android:title="@string/lockscreen_shortcuts_title">
+                <extra android:name="actionMode" android:value="4" />
+                <extra android:name="maxAllowedActions" android:value="20" />
+                <extra android:name="disableLongpress" android:value="true" />
+                <extra android:name="useAppPickerOnly" android:value="true" />
+        </PreferenceScreen>
   
     <PreferenceScreen
         android:title="@string/lockscreen_targets_title">
@@ -34,5 +53,6 @@
            android:targetClass="com.android.systemui.validus.LockscreenShortcutsActivity" />
     </PreferenceScreen>
 
-</PreferenceScreen>
+    </PreferenceCategory>
 
+</PreferenceScreen>

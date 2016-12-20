@@ -23,6 +23,10 @@
     <color name="icon_tint_color">@color/material_deep_teal_500</color>
     <color name="theme_accent">#009688</color>
     <color name="action_picker_fab_background">@color/theme_accent</color>
+    <color name="action_bar_icon_tint">@android:color/white</color>
+    <color name="dslv_icon_dark">#ff009688</color>
+    <color name="dslv_float_cackground_color">#ff1b1f23</color>
+    <color name="actionbar_icon_color">#ffffff</color>
 
     <!-- Expanded desktop -->
     <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
