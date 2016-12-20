@@ -65,6 +65,7 @@
     <string name="traffic_category">Traffic indicators</string>
     <string name="breathing_notifications_category">Breathing Notifications</string>
     <string name="omniswitch_category">OmniSwitch</string>
+    <string name="lockscreen_interface_category">Interface</string>
    
     <!-- Day/Night -->
     <string name="daynight_title">Theme resources</string>
@@ -889,4 +890,7 @@
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Unlock</string>
 
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 </resources>
