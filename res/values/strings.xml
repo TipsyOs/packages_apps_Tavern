@@ -895,11 +895,11 @@
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
     <!-- Hide Lockscreen clock, date & alarm -->
-    <string name="hide_lockscreen_clock_title">Clock</string>
+    <string name="hide_lockscreen_clock_title">Hide clock</string>
     <string name="hide_lockscreen_clock_summary">Display current time</string>
-    <string name="hide_lockscreen_date_title">Date</string>
+    <string name="hide_lockscreen_date_title">Hide Date</string>
     <string name="hide_lockscreen_date_summary">Display today\'s date</string>
-    <string name="hide_lockscreen_alarm_title">Alarm</string>
+    <string name="hide_lockscreen_alarm_title">Hide alarm</string>
     <string name="hide_lockscreen_alarm_summary">Display alarm when set</string>
 
     <!-- Battery Bar -->
