@@ -25,5 +25,11 @@
        android:layout="@layout/ga_gestures_icon"
        android:title="@string/gesture_anywhere_title" />
 
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.tipsy.AppCircleBar"
+        android:layout="@layout/circle_bar_icon"
+        android:title="@string/app_circle_bar_title" />
+
 </PreferenceScreen>
 
