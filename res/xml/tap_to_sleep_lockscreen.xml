@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2014-2016 The Dirty Unicorns Project
+<!--  Copyright (C) 2016 Ground Zero Roms
+
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
   (at your option) any later version.
+
   This program is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   GNU General Public License for more details.
+
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/lockscreen_category"
+    android:title="@string/tap_to_sleep_lockscreen_category"
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-<PreferenceScreen
-            android:key="lockscreen_weather"
-            android:title="@string/lockscreen_weather_title"
-            android:fragment="com.gzr.tavern.fragments.LockScreenWeatherSettings"
-            android:layout="@layout/preference_weather" 
-            />
-  
-     <PreferenceScreen
-            android:key="tap_to_sleep_lockscreen"
-            android:title="@string/tap_to_sleep_lockscreen_category"
-            android:fragment="com.gzr.tavern.fragments.TaptosleepLockscreen"
-            android:layout="@layout/preference_tap_to_sleep" />
-            
+    <com.gzr.tavern.preference.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_anywhere"
+        android:title="@string/double_tap_sleep_anywhere_title"
+        android:summary="@string/double_tap_sleep_anywhere_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
+
