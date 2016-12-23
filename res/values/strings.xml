@@ -456,4 +456,9 @@
     <string name="show_carrier_keyguard">Lockscreen only</string>
     <string name="show_carrier_statusbar">Statusbar only</string>
     <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
+
+    <!-- double tap statusbar to sleep -->
+    <string name="tap_to_sleep_category">Tap to Sleep</string>
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 </resources>
