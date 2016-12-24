@@ -86,7 +86,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.LOCKSCREEN_WEATHER_SETTINGS;
+        return MetricsEvent.TAVERN;
     }
 
     private void updatePreference() {
