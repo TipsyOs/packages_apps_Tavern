@@ -22,9 +22,14 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
           <PreferenceScreen
- 	    android:key="daynight"
- 	    android:fragment="com.gzr.wolvesden.fragments.DayNightSettings"
- 	    android:title="@string/daynight_title"/>
+            android:key="animations"
+            android:fragment="com.gzr.wolvesden.fragments.Animations"
+            android:title="@string/animations" />
+
+          <PreferenceScreen
+     	    android:key="daynight"
+ 	        android:fragment="com.gzr.wolvesden.fragments.DayNightSettings"
+ 	        android:title="@string/daynight_title"/>
  
           <Preference
             android:key="expanded_desktop"
