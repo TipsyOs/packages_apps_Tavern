@@ -24,6 +24,11 @@
     <PreferenceCategory 
          android:title="@string/lockscreen_interface_category">
 
+    <PreferenceScreen
+        android:key="lockscreen_weather"
+        android:title="@string/lockscreen_weather_title"
+        android:fragment="com.gzr.wolvesden.fragments.LockScreenWeatherSettings"/>
+
     <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
         android:key="lockscreen_visualizer"
         android:title="@string/lockscreen_visualizer_title"
