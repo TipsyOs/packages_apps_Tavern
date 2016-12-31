@@ -40,6 +40,9 @@
     <string name="profile_reset_title">Reset</string>
     <string name="show_title">Show</string>
     <string name="choose_app">Choose app</string>
+    <string name="show_title">Show</string>
+    <string name="colors_title">Colors</string>
+    <string name="color_title">Color</string>
 
     <string name="reset_paranoid">Validus</string>
     <string name="reset_android">Android</string>
@@ -930,8 +933,13 @@
     <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
 
     <!-- lock screen visualizer -->
+    <string name="visualizer_title">Visualizer settings</string>
+    <string name="visualizer_settings_title">Music visualizer</string>
     <string name="lockscreen_visualizer_title">Lockscreen visualizer</string>
-    <string name="lockscreen_visualizer_summary">Display music visualizer on lockscreen</string>
+    <string name="lockscreen_visualizer_summary">Enable to show the music visualizer on the lock screen</string>
+    <string name="lock_screen_visualizer_settings_summary">Customize the music visualizer</string>
+    <string name="visualizer_use_custom_color_title">Customize the color</string>
+    <string name="visualizer_use_custom_color_summary">Enable to use a custom color, disable to create the color from the lock screen background automatically</string>
 
     <!-- ListView animation -->
     <string name="listview">ListView</string>
