@@ -34,4 +34,6 @@
     <color name="expanded_button_color_normal">#4CAF50</color>
     <color name="expanded_button_color_close">#F44336</color>
 
+    <color name="seekbar_dot_color">@android:color/holo_red_light</color>
+
 </resources>

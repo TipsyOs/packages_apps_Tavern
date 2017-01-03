@@ -30,6 +30,11 @@
             android:targetClass="com.android.systemui.tuner.TunerActivity" />
      </PreferenceScreen>
 
+    <Preference
+        android:key="statusbar_weather"
+        android:title="@string/status_bar_temperature_title"
+        android:fragment="com.gzr.wolvesden.fragments.StatusBarWeather" />
+
      <PreferenceScreen
         android:key="status_bar_battery_style"
         android:title="@string/status_bar_battery_style_category"
