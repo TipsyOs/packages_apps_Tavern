@@ -55,6 +55,11 @@
             android:targetClass="com.android.systemui.tuner.TunerActivity" />
      </PreferenceScreen>
 
+    <Preference
+        android:key="statusbar_weather"
+        android:title="@string/status_bar_temperature_title"
+        android:fragment="com.gzr.tavern.fragments.StatusBarWeather" />
+
      <PreferenceScreen
         android:key="statusbar_notifications"
         android:fragment="com.gzr.tavern.fragments.StatusbarNotifications"
