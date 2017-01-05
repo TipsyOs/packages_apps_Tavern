@@ -14,6 +14,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_category" >
 
+     <PreferenceScreen
+        android:key="header"
+        android:fragment="com.gzr.wolvesden.fragments.HeaderSettings"
+        android:title="@string/header_title"
+        android:summary="@string/header_summary"/>
+
     <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
         android:key="lockscreen_qs_disabled"
         android:title="@string/lockscreen_qs_disabled_title"
