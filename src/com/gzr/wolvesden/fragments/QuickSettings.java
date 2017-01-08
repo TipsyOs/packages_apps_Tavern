@@ -288,11 +288,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                     Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
             int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
             mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
+            return true;
         } else if (preference == mHeaderShadow) {
             Integer headerShadow = (Integer) newValue;
             int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+            return true;
         }
         return false;
     }
