@@ -27,10 +27,22 @@
             android:layout="@layout/preference_powermenu"
             android:title="@string/powermenu_category" />
 
+         <Preference
+            android:key="expanded_desktop"
+            android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment"
+            android:layout="@layout/preference_expanded_desktop"
+            android:title="@string/power_menu_expanded_desktop" />
+
         <PreferenceScreen
         android:key="animations"
         android:fragment="com.gzr.tavern.fragments.Animations"
         android:layout="@layout/preference_animations"
         android:title="@string/animations" />
+
+        <PreferenceScreen
+            android:key="density_changer"
+            android:fragment="com.android.settings.util.Density"
+            android:layout="@layout/preference_lcd_density"
+            android:title="@string/lcd_density_title" />
 
 </PreferenceScreen>
