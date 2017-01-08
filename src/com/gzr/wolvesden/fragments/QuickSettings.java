@@ -16,8 +16,14 @@
 
 package com.gzr.wolvesden.fragments;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ActivityManagerNative;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
@@ -49,6 +55,9 @@ import com.android.internal.util.validus.ValidusUtils;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.Utils;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import com.gzr.wolvesden.preference.CustomSeekBarPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
@@ -63,6 +72,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
     private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
     private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
+    private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
+    private static final String CUSTOM_HEADER_IMAGE = "status_bar_custom_header";
+    private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
+    private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
@@ -74,6 +87,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private CustomSeekBarPreference mSysuiQqsCount;
     private SwitchPreference mLockQsDisabled;
     private SwitchPreference mQsDataAdvanced;
+    private ListPreference mDaylightHeaderPack;
+    private CustomSeekBarPreference mHeaderShadow;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -163,6 +178,37 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
                 Settings.Secure.QS_DATA_ADVANCED, 0) == 1));
         }
+
+        String settingHeaderPackage = Settings.System.getString(getContentResolver(),
+                Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
+        if (settingHeaderPackage == null) {
+            settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+        }
+        mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
+
+        List<String> entries = new ArrayList<String>();
+        List<String> values = new ArrayList<String>();
+        getAvailableHeaderPacks(entries, values);
+        mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
+        mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
+
+        int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+        if (valueIndex == -1) {
+            // no longer found
+            settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+            Settings.System.putString(getContentResolver(),
+                    Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, settingHeaderPackage);
+            valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+        }
+        mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
+        mDaylightHeaderPack.setOnPreferenceChangeListener(this);
+
+        mHeaderShadow = (CustomSeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+        final int headerShadow = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 80);
+        mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
+        mHeaderShadow.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -175,54 +221,54 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         super.onResume();
     }
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
 
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         int intValue;
         int index;
-
         if (preference == mTileAnimationStyle) {
-            int tileAnimationStyle = Integer.valueOf((String) objValue);
+            int tileAnimationStyle = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(getContentResolver(), Settings.System.ANIM_TILE_STYLE,
                     tileAnimationStyle, UserHandle.USER_CURRENT);
             updateTileAnimationStyleSummary(tileAnimationStyle);
             updateAnimTileStyle(tileAnimationStyle);
             return true;
         } else if (preference == mTileAnimationDuration) {
-            int tileAnimationDuration = Integer.valueOf((String) objValue);
+            int tileAnimationDuration = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(getContentResolver(), Settings.System.ANIM_TILE_DURATION,
                     tileAnimationDuration, UserHandle.USER_CURRENT);
             updateTileAnimationDurationSummary(tileAnimationDuration);
             return true;
         } else if (preference == mTileAnimationInterpolator) {
-            int tileAnimationInterpolator = Integer.valueOf((String) objValue);
+            int tileAnimationInterpolator = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(getContentResolver(), Settings.System.ANIM_TILE_INTERPOLATOR,
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
         } else if (preference == mQuickPulldown) {
-            int quickPulldownValue = Integer.valueOf((String) objValue);
+            int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(getContentResolver(), Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updatePulldownSummary(quickPulldownValue);
             return true;
         } else if (preference == mQsColumns) {
-            int qsColumns = (Integer) objValue;
+            int qsColumns = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
             return true;
         } else if (preference == mRowsPortrait) {
-            int rowsPortrait = (Integer) objValue;
+            int rowsPortrait = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_ROWS_PORTRAIT, rowsPortrait * 1);
             return true;
         } else if (preference == mRowsLandscape) {
-            int rowsLandscape = (Integer) objValue;
+            int rowsLandscape = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
            return true;
         } else if (preference == mSysuiQqsCount) {
-            int SysuiQqsCount = (Integer) objValue;
+            int SysuiQqsCount = (Integer) newValue;
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
             return true;
@@ -236,6 +282,17 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.QS_DATA_ADVANCED, checked ? 1:0);
             return true;
+        } else if (preference == mDaylightHeaderPack) {
+            String value = (String) newValue;
+            Settings.System.putString(getContentResolver(),
+                    Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
+            int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
+            mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
+        } else if (preference == mHeaderShadow) {
+            Integer headerShadow = (Integer) newValue;
+            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
         }
         return false;
     }
@@ -283,6 +340,40 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                 mTileAnimationDuration.setSelectable(true);
                 mTileAnimationInterpolator.setSelectable(true);
             }
+        }
+    }
+        
+    private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
+        Intent i = new Intent();
+        PackageManager packageManager = getActivity().getPackageManager();
+        i.setAction("org.omnirom.DaylightHeaderPack");
+        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+            String packageName = r.activityInfo.packageName;
+            if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
+                values.add(0, packageName);
+            } else {
+                values.add(packageName);
+            }
+            String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
+            if (label == null) {
+                label = r.activityInfo.packageName;
+            }
+            if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
+                entries.add(0, label);
+            } else {
+                entries.add(label);
+            }
+        }
+        i.setAction("org.omnirom.DaylightHeaderPack1");
+        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+            String packageName = r.activityInfo.packageName;
+            values.add(packageName  + "/" + r.activityInfo.name);
+
+            String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
+            if (label == null) {
+                label = packageName;
+            }
+            entries.add(label);
         }
     }
 }
