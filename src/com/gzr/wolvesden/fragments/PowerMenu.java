@@ -46,6 +46,9 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
     private ListPreference mAdvancedReboot;
     private SwitchPreference mPowermenuTorch;
     private CustomSeekBarPreference mPowerRebootDialogDim;
+    private SwitchPreference mOnTheGoPowerMenu;
+
+    private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,12 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
                 getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS, 0)));
         mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
         mPowerMenuAnimations.setOnPreferenceChangeListener(this);
+
+        mOnTheGoPowerMenu = (SwitchPreference) findPreference(POWER_MENU_ONTHEGO_ENABLED);
+        mOnTheGoPowerMenu.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0) == 1));
+        mOnTheGoPowerMenu.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -96,6 +105,7 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mAdvancedReboot) {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
                     Integer.valueOf((String) newValue));
@@ -116,6 +126,10 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
                     Integer.valueOf((String) newValue));
             mPowerMenuAnimations.setValue(String.valueOf(newValue));
             mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            return true;
+        } else if (preference == mOnTheGoPowerMenu) {
+            boolean value = ((Boolean)newValue).booleanValue();
+            Settings.System.putInt(getContentResolver(), Settings.System.POWER_MENU_ONTHEGO_ENABLED, value ? 1 : 0);
             return true;
         }
         return false;
