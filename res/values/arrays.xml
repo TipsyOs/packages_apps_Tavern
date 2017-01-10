@@ -601,8 +601,8 @@
         <item>@string/recents_clear_all_location_top_left</item>
         <item>@string/recents_clear_all_location_top_center</item>
         <item>@string/recents_clear_all_location_bottom_right</item>
-       <item>@string/recents_clear_all_location_bottom_left</item>
-         <item>@string/recents_clear_all_location_bottom_center</item>
+        <item>@string/recents_clear_all_location_bottom_left</item>
+        <item>@string/recents_clear_all_location_bottom_center</item>
     </string-array>
 
     <string-array name="recents_clear_all_location_values" translatable="false">
@@ -612,5 +612,15 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+
+    <string-array name="custom_header_provider_entries" translatable="false">
+        <item>@string/daylight_header_provider_title</item>
+        <item>@string/static_header_provider_title</item>
+    </string-array>
+
+    <string-array name="custom_header_provider_values" translatable="false">
+        <item>@string/daylight_header_provider</item>
+        <item>@string/static_header_provider</item>
+
     </string-array>
 </resources>
