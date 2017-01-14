@@ -46,6 +46,11 @@
         android:key="statusbar_notifications"
         android:title="@string/statusbar_notifications_category">
 
+    <PreferenceScreen
+        android:key="ticker"
+        android:fragment="com.gzr.wolvesden.fragments.Ticker"
+        android:title="@string/ticker_screen_title" />
+
      <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="status_bar_notif_count"
         android:title="@string/status_bar_notif_count_title"
