@@ -20,6 +20,11 @@
     android:title="@string/multitasking_category" >
 
     <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.gzr.wolvesden.fragments.AppCircleBar"
+        android:title="@string/app_circle_bar_title" />
+
+    <PreferenceScreen
        android:key="gesture_anywhere"
        android:fragment="com.gzr.wolvesden.gestureanywhere.GestureAnywhereSettings"
        android:title="@string/gesture_anywhere_title" />
