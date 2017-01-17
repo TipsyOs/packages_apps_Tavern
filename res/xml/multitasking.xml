@@ -20,6 +20,11 @@
     android:title="@string/multitasking_category" >
 
     <PreferenceScreen
+       android:key="gesture_anywhere"
+       android:fragment="com.gzr.wolvesden.gestureanywhere.GestureAnywhereSettings"
+       android:title="@string/gesture_anywhere_title" />
+
+    <PreferenceScreen
        android:key="omniswitch"
        android:title="@string/omniswitch_category" >
        <intent
