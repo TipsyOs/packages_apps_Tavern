@@ -92,6 +92,12 @@
         android:defaultValue="false" />
 
     <com.gzr.tavern.preference.SecureSettingSwitchPreference
+        android:key="qs_bt_advanced"
+        android:title="@string/qs_advanced_bt_title"
+        android:summary="@string/qs_advanced_bt_summary"
+        android:defaultValue="false" />
+
+    <com.gzr.tavern.preference.SecureSettingSwitchPreference
          android:key="qs_wifi_easy_toggle"
          android:title="@string/qs_wifi_easy_toggle_title"
          android:summary="@string/qs_wifi_easy_toggle_summary"
