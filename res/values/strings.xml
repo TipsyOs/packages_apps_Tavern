@@ -79,6 +79,24 @@
     <string name="clock_date_format">Date format</string>
     <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Enter string</string>
+    <string name="status_bar_show_clock_second_title">Clock seconds</string>
+    <!-- StatusBar Clock style -->
+    <string name="clock_font_style_title">Clock font style</string>
+    <string name="clock_font_normal">Normal</string>
+    <string name="clock_font_italic">Italic</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_bold_italic">Bold Italic</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_light_italic">Light Italic</string>
+    <string name="clock_font_thin">Thin</string>
+    <string name="clock_font_thin_italic">Thin Italic</string>
+    <string name="clock_font_condensed">Condensed</string>
+    <string name="clock_font_condensed_italic">Condensed Italic</string>
+    <string name="clock_font_condensed_bold">Condensed Bold</string>
+    <string name="clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="clock_font_medium">Medium</string>
+    <string name="clock_font_medium_italic">Medium Italic</string>
+    <string name="clock_font_size_title">Font size</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_summary">Battery Bar options for status and nav bar</string>
@@ -93,6 +111,7 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
     <string name="battery_bar_charging_color">Battery bar charging color</string>
+    <string name="battery_bar_battery_low_color">Battery bar low battery color</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -478,4 +497,35 @@
     <string name="screenshot_type_title">Screenshot type</string>
     <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
     <string name="screenshot_type_partial">Drag selection on the area you want to take as a screenshot</string>
+
+    <string name="lockscreen_colors_fonts_category_title">Colors and Fonts</string>
+    <!-- Lock Clock Fonts -->
+    <string name="lock_clock_font_title">Lock Clock</string>
+    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
+    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
+    <string name="lock_clock_font_stock">Normal (default)</string>
+    <string name="lock_clock_font_bold">Bold</string>
+    <string name="lock_clock_font_light">Light</string>
+    <string name="lock_clock_font_italic">Italic</string>
+    <string name="lock_clock_font_bold_italic">Bold Italic</string>
+    <string name="lock_clock_font_light_italic">Light Italic</string>
+    <string name="lock_clock_font_thin_italic">Thin Italic</string>
+    <string name="lock_clock_font_thin">Thin</string>
+    <string name="lock_clock_font_condensed_normal">Condensed</string>
+    <string name="lock_clock_font_condensed_italic">Condensed Italic</string>
+    <string name="lock_clock_font_condensed_bold">Condensed Bold</string>
+    <string name="lock_clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="lock_clock_font_medium_normal">Medium</string>
+    <string name="lock_clock_font_medium_italic">Medium Italic</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Lockscreen colors</string>
+    <string name="lockscreen_owner_info_color">Owner info</string>
+    <string name="lockscreen_alarm_color">Alarm</string>
+    <string name="lockscreen_clock_color">Clock</string>
+    <string name="lockscreen_clock_date_color">Date</string>
+    <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
+    <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
+    <string name="yes">YES</string>
+
 </resources>
