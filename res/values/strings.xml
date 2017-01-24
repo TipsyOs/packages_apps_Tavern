@@ -29,6 +29,7 @@
     <string name="traffic_category">Traffic indicators</string>
     <string name="statusbar_notifications_category">Notifications</string>
     <string name="statusbar_items_category">Statusbar items</string>
+    <string name="recents_category">Recents</string>
 
     <!-- Dialog -->
     <string name="tavern_dialog_title">Coming Soon!!</string>
@@ -531,4 +532,17 @@
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Lockscreen battery info</string>
     <string name="lockscreen_battery_info_summary">Display real time charger current, voltage and battery temperature on lockscreen while charging</string>
+
+    <string name="aosp_recents_title">AOSP recents</string>
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Enable clear all button</string>
+    <string name="show_clear_all_recents_button_summary">Show the clear all button when using recents</string>
+    <string name="recents_clear_all_location_title">Clear all button location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+
 </resources>
