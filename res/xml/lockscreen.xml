@@ -22,8 +22,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory 
-         android:title="@string/lockscreen_interface_category">
+        android:title="@string/lockscreen_interface_category">
 
+    <PreferenceScreen
+        android:key="lock_clock_fonts"
+        android:title="@string/lock_screen_font_title"
+        android:fragment="com.gzr.wolvesden.fragments.LockClockFonts"/>
+   
     <PreferenceScreen
         android:key="lockscreen_weather"
         android:title="@string/lockscreen_weather_title"
