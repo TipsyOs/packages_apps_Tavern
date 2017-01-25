@@ -25,9 +25,9 @@
         android:title="@string/lockscreen_interface_category">
 
     <PreferenceScreen
-        android:key="lock_clock_fonts"
-        android:title="@string/lock_screen_font_title"
-        android:fragment="com.gzr.wolvesden.fragments.LockClockFonts"/>
+        android:key="lockscreen_colors_fonts"
+        android:title="@string/lockscreen_colors_fonts_category_title"
+        android:fragment="com.gzr.wolvesden.fragments.LockscreenColorsFonts"/>
    
     <PreferenceScreen
         android:key="lockscreen_weather"
