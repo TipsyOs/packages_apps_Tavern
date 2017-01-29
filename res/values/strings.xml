@@ -579,6 +579,8 @@
     <string name="show_carrier_keyguard">Lockscreen only</string>
     <string name="show_carrier_statusbar">Statusbar only</string>
     <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
+    <string name="status_bar_carrier_color">Carrier label color</string>
+    <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
 
     <!-- Lockscreen Shortcuts -->
     <string name="lockscreen_targets_title">Bottom L/R shortcuts</string>
@@ -1310,5 +1312,4 @@
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
     <string name="yes">YES</string>
 
-    <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
 </resources>
