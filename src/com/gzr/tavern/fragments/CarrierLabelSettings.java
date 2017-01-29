@@ -40,10 +40,12 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
 
     private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+    private static final String STATUS_BAR_CARRIER_FONT_STYLE = "status_bar_carrier_font_style";
 
     private PreferenceScreen mCustomCarrierLabel;
     private ListPreference mShowCarrierLabel;
     private String mCustomCarrierLabelText;
+    private ListPreference mStatusBarCarrierFontStyle;	
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,13 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
 
         mCustomCarrierLabel = (PreferenceScreen) findPreference(CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
+
+        mStatusBarCarrierFontStyle = (ListPreference) findPreference(STATUS_BAR_CARRIER_FONT_STYLE);
+        mStatusBarCarrierFontStyle.setOnPreferenceChangeListener(this);
+        mStatusBarCarrierFontStyle.setValue(Integer.toString(Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CARRIER_FONT_STYLE, 0)));
+        mStatusBarCarrierFontStyle.setSummary(mStatusBarCarrierFontStyle.getEntry());
+
     }
 
     @Override
@@ -90,6 +99,13 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
                 STATUS_BAR_SHOW_CARRIER, showCarrierLabel);
             mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
             return true;
+        } else if (preference == mStatusBarCarrierFontStyle) {
+                int val = Integer.parseInt((String) newValue);
+                int index = mStatusBarCarrierFontStyle.findIndexOfValue((String) newValue);
+                Settings.System.putInt(resolver,
+                        Settings.System.STATUS_BAR_CARRIER_FONT_STYLE, val);
+                mStatusBarCarrierFontStyle.setSummary(mStatusBarCarrierFontStyle.getEntries()[index]);
+                return true;
          }
          return false;
     }

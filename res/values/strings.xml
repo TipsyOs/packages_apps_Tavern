@@ -613,6 +613,8 @@
     <string name="status_bar_weather_font_notoserif">NotoSerif Normal</string>
     <string name="status_bar_weather_font_notoserif_italic">NotoSerif Italic</string>
     <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
-    <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>	
+    <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+
+    <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
 
 </resources>
