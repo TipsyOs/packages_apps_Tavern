@@ -477,6 +477,8 @@
     <string name="show_carrier_keyguard">Lockscreen only</string>
     <string name="show_carrier_statusbar">Statusbar only</string>
     <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
+    <string name="status_bar_carrier_color">Carrier label color</string>
+    <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
 
     <!-- double tap statusbar to sleep -->
     <string name="tap_to_sleep_category">Tap to Sleep</string>
@@ -614,7 +616,5 @@
     <string name="status_bar_weather_font_notoserif_italic">NotoSerif Italic</string>
     <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
     <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
-
-    <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
 
 </resources>
