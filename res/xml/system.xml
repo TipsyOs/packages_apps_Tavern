@@ -49,6 +49,7 @@
             android:key="custom_wall_browse"
             android:title="@string/custom_wall_browse_title"
             android:summary="@string/custom_wall_browse_summary"
+            android:layout="@layout/preference_custom_wall"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="org.omnirom.omnistyle"
