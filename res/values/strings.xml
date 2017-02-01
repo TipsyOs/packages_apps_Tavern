@@ -531,7 +531,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Lockscreen battery info</string>
-    <string name="lockscreen_battery_info_summary">Display real time charger current, voltage and battery temperature on lockscreen while charging</string>
+    <string name="lockscreen_battery_info_summary">Display charging current, voltage and battery temperature on lockscreen</string>
 
     <string name="aosp_recents_title">AOSP recents</string>
     <!-- Recents panel settings -->
