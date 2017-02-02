@@ -71,7 +71,11 @@
     <string name="omniswitch_category">OmniSwitch</string>
     <string name="lockscreen_interface_category">Interface</string>
     <string name="weather_cat_lockscreen">Lockscreen</string>
-   
+
+    <!-- OmniStyles WallpaperPicker -->   
+    <string name="custom_wall_browse_title">Validus Wallpapers</string>
+    <string name="custom_wall_browse_summary"></string>
+
     <!-- Day/Night -->
     <string name="daynight_title">Theme resources</string>
     <string name="daynight_header_title">Theme resources</string>
