@@ -32,6 +32,12 @@
         android:title="@string/app_circle_bar_title" />
 
     <PreferenceScreen
+            android:key="recents"
+            android:fragment="com.gzr.tavern.fragments.Recents"
+            android:layout="@layout/preference_recents"
+            android:title="@string/recents_category" />
+
+    <PreferenceScreen
             android:key="screenshot_type"
             android:title="@string/screenshot_type_category"
             android:fragment="com.gzr.tavern.fragments.Screenshot"

@@ -12,30 +12,32 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/lockscreen_category"
-    android:layout="@layout/tab"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:title="@string/lockscreen_category"  android:layout="@layout/tab"
+            xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-<PreferenceScreen
-            android:key="lockscreen_weather"
-            android:title="@string/lockscreen_weather_title"
-            android:fragment="com.gzr.tavern.fragments.LockScreenWeatherSettings"
-            android:layout="@layout/preference_weather" 
-            />
-  
-     <PreferenceScreen
-            android:key="tap_to_sleep_lockscreen"
-            android:title="@string/tap_to_sleep_lockscreen_category"
-            android:fragment="com.gzr.tavern.fragments.TaptosleepLockscreen"
-            android:layout="@layout/preference_tap_to_sleep" />
-            
+    <PreferenceScreen
+        android:key="lockscreen_weather"
+        android:title="@string/lockscreen_weather_title"
+        android:fragment="com.gzr.tavern.fragments.LockScreenWeatherSettings"
+        android:layout="@layout/preference_weather" />
 
      <PreferenceScreen
-            android:key="lockscreen_colors_fonts"
-            android:title="@string/lockscreen_colors_fonts_category_title"
-            android:fragment="com.gzr.tavern.fragments.LockscreenColorsFonts"
-            android:layout="@layout/preference_lockscreen_colors_fonts" />
+        android:key="tap_to_sleep_lockscreen"
+        android:title="@string/tap_to_sleep_lockscreen_category"
+        android:fragment="com.gzr.tavern.fragments.TaptosleepLockscreen"
+        android:layout="@layout/preference_tap_to_sleep" />
+
+     <PreferenceScreen
+        android:key="lockscreen_colors_fonts"
+        android:title="@string/lockscreen_colors_fonts_category_title"
+        android:fragment="com.gzr.tavern.fragments.LockscreenColorsFonts"
+        android:layout="@layout/preference_lockscreen_colors_fonts" />
+
+    <com.gzr.tavern.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary" 
+        android:defaultValue="true" />
 
 </PreferenceScreen>
