@@ -71,7 +71,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
     private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
     private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
-    private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
+    private static final String PREF_QS_EASY_TOGGLE = "qs_easy_toggle";
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_IMAGE = "status_bar_custom_header";
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
@@ -88,7 +88,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private CustomSeekBarPreference mRowsLandscape;
     private CustomSeekBarPreference mSysuiQqsCount;
     private SwitchPreference mLockQsDisabled;
-    private SwitchPreference mQsDataAdvanced;
+    private SwitchPreference mEasyToggle;
     private ListPreference mDaylightHeaderPack;
     private ListPreference mHeaderProvider;
     private String mDaylightHeaderProvider;
@@ -175,14 +175,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             prefSet.removePreference(mLockQsDisabled);
         }
 
-        mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
-        mQsDataAdvanced.setOnPreferenceChangeListener(this);
-        if (ValidusUtils.isWifiOnly(getActivity())) {
-            prefSet.removePreference(mQsDataAdvanced);
-        } else {
-        mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
-                Settings.Secure.QS_DATA_ADVANCED, 0) == 1));
-        }
+        mEasyToggle = (SwitchPreference) findPreference(PREF_QS_EASY_TOGGLE);
+        mEasyToggle.setOnPreferenceChangeListener(this);
+        mEasyToggle.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_EASY_TOGGLE, 0) == 1));
 
         String settingHeaderPackage = Settings.System.getString(getContentResolver(),
                 Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
@@ -298,10 +294,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.LOCK_QS_DISABLED, checked ? 1:0);
             return true;
-        } else if  (preference == mQsDataAdvanced) {
+        } else if  (preference == mEasyToggle) {
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.QS_DATA_ADVANCED, checked ? 1:0);
+                    Settings.Secure.QS_EASY_TOGGLE, checked ? 1:0);
             return true;
         } else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;
