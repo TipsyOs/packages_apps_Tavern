@@ -185,7 +185,7 @@
 
     <!-- Quick Settings on lockscreen -->
     <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
-    <string name="lockscreen_qs_disabled_summary">Disable shortcuts and expanding quick settings on secure lock screens</string>
+    <string name="lockscreen_qs_disabled_summary">Disable the quick settings on secure lock screens</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
@@ -906,12 +906,18 @@
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
     <!-- Hide Lockscreen clock, date & alarm -->
-    <string name="hide_lockscreen_clock_title">Hide clock</string>
-    <string name="hide_lockscreen_clock_summary">Display current time</string>
-    <string name="hide_lockscreen_date_title">Hide Date</string>
-    <string name="hide_lockscreen_date_summary">Display today\'s date</string>
-    <string name="hide_lockscreen_alarm_title">Hide alarm</string>
-    <string name="hide_lockscreen_alarm_summary">Display alarm when set</string>
+    <string name="hide_lockscreen_clock_title">Clock widget</string>
+    <string name="hide_lockscreen_clock_summary_on">Clock widget showing on the keyguard</string>
+    <string name="hide_lockscreen_clock_summary_off">Clock widget hidden on the keyguard</string>
+    <string name="hide_lockscreen_date_title">Date widget</string>
+    <string name="hide_lockscreen_date_summary_on">Date widget showing on the keyguard</string>
+    <string name="hide_lockscreen_date_summary_off">Date widget hidden on the keyguard</string>
+    <string name="hide_lockscreen_alarm_title">Alarm text</string>
+    <string name="hide_lockscreen_alarm_summary_on">Alarm text showing on the keyguard</string>
+    <string name="hide_lockscreen_alarm_summary_off">Alarm text hidden on the keyguard</string>
+    <string name="hide_lockscreen_bottom_shortcuts_title">Bottom shortcuts</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_on">Bottom shortcuts showing on the keyguard</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_off">Bottom shortcuts hidden on the keyguard</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
