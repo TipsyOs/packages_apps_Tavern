@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2014-2016 The Dirty Unicorns Project
+<!--  Copyright (C) 2017 GZR
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -23,6 +23,11 @@
 
     <PreferenceCategory 
         android:title="@string/lockscreen_interface_category">
+
+    <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
+        android:key="keyguard_show_clock"
+        android:title="@string/keyguard_statusbar_clock_title"
+        android:summary="@string/keyguard_statusbar_clock_summary" />
 
     <PreferenceScreen
         android:key="lockscreen_colors_fonts"
