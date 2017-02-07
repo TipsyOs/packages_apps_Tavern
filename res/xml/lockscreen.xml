@@ -24,11 +24,6 @@
     <PreferenceCategory 
         android:title="@string/lockscreen_interface_category">
 
-    <com.gzr.wolvesden.preference.SecureSettingSwitchPreference
-        android:key="keyguard_show_clock"
-        android:title="@string/keyguard_statusbar_clock_title"
-        android:summary="@string/keyguard_statusbar_clock_summary" />
-
     <PreferenceScreen
         android:key="lockscreen_colors_fonts"
         android:title="@string/lockscreen_colors_fonts_category_title"
@@ -38,6 +33,11 @@
         android:key="lockscreen_weather"
         android:title="@string/lockscreen_weather_title"
         android:fragment="com.gzr.wolvesden.fragments.LockScreenWeatherSettings"/>
+
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="keyguard_show_clock"
+        android:title="@string/keyguard_statusbar_clock_title"
+        android:summary="@string/keyguard_statusbar_clock_summary" />
 
     <PreferenceScreen
         android:key="lock_screen_visualizer_settings"
