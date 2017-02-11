@@ -58,6 +58,7 @@
     <Preference
         android:key="statusbar_weather"
         android:title="@string/status_bar_temperature_title"
+        android:layout="@layout/preference_statusbar_temp"
         android:fragment="com.gzr.tavern.fragments.StatusBarWeather" />
 
      <PreferenceScreen
