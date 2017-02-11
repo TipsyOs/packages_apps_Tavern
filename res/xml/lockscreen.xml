@@ -34,12 +34,6 @@
         android:fragment="com.gzr.tavern.fragments.LockscreenColorsFonts"
         android:layout="@layout/preference_lockscreen_colors_fonts" />
 
-    <com.gzr.tavern.preference.SystemSettingSwitchPreference
-        android:key="lockscreen_battery_info"
-        android:title="@string/lockscreen_battery_info_title"
-        android:summary="@string/lockscreen_battery_info_summary" 
-        android:defaultValue="true" />
-
      <Preference
         android:key="lock_items"
         android:fragment="com.gzr.tavern.fragments.LockItems"
