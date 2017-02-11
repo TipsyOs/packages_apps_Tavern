@@ -18,13 +18,6 @@
     android:title="@string/lock_items_category" >
 
     <com.gzr.tavern.preference.SystemSettingSwitchPreference
-        android:key="show_emergency_button"
-        android:title="@string/emergency_button_title"
-        android:summaryOn="@string/emergency_button_summary_on"
-        android:summaryOff="@string/emergency_button_summary_off"
-        android:defaultValue="true" />
-
-    <com.gzr.tavern.preference.SystemSettingSwitchPreference
         android:key="hide_lockscreen_clock"
         android:title="@string/hide_lockscreen_clock_title"
         android:summary="@string/hide_lockscreen_clock_summary"
