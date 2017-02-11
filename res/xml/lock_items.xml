@@ -42,4 +42,10 @@
         android:summary="@string/hide_lockscreen_alarm_summary"
         android:defaultValue="true" />
 
+    <com.gzr.tavern.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary" 
+        android:defaultValue="false" />
+
 </PreferenceScreen>
