@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -63,18 +64,21 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
             "recent_panel_expanded_mode";
     private static final String RECENT_PANEL_BG_COLOR =
             "recent_panel_bg_color";
-    private static final String RECENT_CARD_BG_COLOR =
+    /*private static final String RECENT_CARD_BG_COLOR =
             "recent_card_bg_color";
     private static final String RECENT_CARD_TEXT_COLOR =
-            "recent_card_text_color";
+            "recent_card_text_color";*/
+
+    private static final int MENU_RESET = Menu.FIRST;
+    private static final int DIALOG_RESET_CONFIRM = 1;
 
     private CustomSeekBarPreference mMaxApps;
     private SystemSettingSwitchPreference mRecentPanelLeftyMode;
     private CustomSeekBarPreference mRecentPanelScale;
     private ListPreference mRecentPanelExpandedMode;
     private ColorPickerPreference mRecentPanelBgColor;
-    private ColorPickerPreference mRecentCardBgColor;
-    private ColorPickerPreference mRecentCardTextColor;
+    //private ColorPickerPreference mRecentCardBgColor;
+    //private ColorPickerPreference mRecentCardTextColor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,6 +91,54 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
             pref.setChecked(true);
             pref.setEnabled(false);
         }
+
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public Dialog onCreateDialog(int dialogId) {
+        Dialog dialog = null;
+        switch (dialogId) {
+            case DIALOG_RESET_CONFIRM:
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle(R.string.recent_reset_title);
+                alertDialog.setMessage(R.string.recent_reset_confirm);
+                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        resetSettings();
+                    }
+                });
+                alertDialog.setNegativeButton(R.string.write_settings_off, null);
+                dialog = alertDialog.create();
+                break;
+         }
+        return dialog;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, MENU_RESET, 0, R.string.reset)
+                .setIcon(com.android.internal.R.drawable.ic_menu_refresh)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET:
+                showDialog(DIALOG_RESET_CONFIRM);
+                return true;
+             default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+    private void resetSettings() {
+        Settings.System.putInt(getContext().getContentResolver(),
+                Settings.System.RECENT_PANEL_BG_COLOR,
+                0x76009688);
+        mRecentPanelBgColor.setSummary(R.string.default_string);
+        mRecentPanelBgColor.setNewPreviewColor(0x76009688);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -107,7 +159,7 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
         } else if (preference == mRecentPanelBgColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            if (hex.equals("#00ffffff")) {
+            if (hex.equals("#76009688")) {
                 preference.setSummary(R.string.default_string);
             } else {
                 preference.setSummary(hex);
@@ -117,7 +169,7 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
                     Settings.System.RECENT_PANEL_BG_COLOR,
                     intHex);
             return true;
-        } else if (preference == mRecentCardBgColor) {
+        /*} else if (preference == mRecentCardBgColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             if (hex.equals("#00ffffff")) {
@@ -142,7 +194,7 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
             Settings.System.putInt(getContext().getContentResolver(),
                     Settings.System.RECENT_CARD_TEXT_COLOR,
                     intHex);
-            return true;
+            return true;*/
         } else if (preference == mMaxApps) {
             Settings.System.putInt(getContext().getContentResolver(),
                 Settings.System.RECENTS_MAX_APPS, Integer.valueOf(String.valueOf(newValue)));
@@ -168,7 +220,7 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
 
         mMaxApps.setValue(Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.RECENTS_MAX_APPS, ActivityManager.getMaxRecentTasksStatic(),
+                Settings.System.RECENTS_MAX_APPS, 15,
                 UserHandle.USER_CURRENT));
 
         final int recentScale = Settings.System.getInt(getContext().getContentResolver(),
@@ -193,9 +245,9 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
                 (ColorPickerPreference) findPreference(RECENT_PANEL_BG_COLOR);
         mRecentPanelBgColor.setOnPreferenceChangeListener(this);
         final int intColor = Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.RECENT_PANEL_BG_COLOR, 0x00ffffff);
+                Settings.System.RECENT_PANEL_BG_COLOR, 0x76009688);
         String hexColor = String.format("#%08x", (0x00ffffff & intColor));
-        if (hexColor.equals("#00ffffff")) {
+        if (hexColor.equals("#76009688")) {
             mRecentPanelBgColor.setSummary(R.string.default_string);
         } else {
             mRecentPanelBgColor.setSummary(hexColor);
@@ -203,7 +255,7 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
         mRecentPanelBgColor.setNewPreviewColor(intColor);
 
         // Recent card background color
-        mRecentCardBgColor =
+        /*mRecentCardBgColor =
                 (ColorPickerPreference) findPreference(RECENT_CARD_BG_COLOR);
         mRecentCardBgColor.setOnPreferenceChangeListener(this);
         final int intColorCard = Settings.System.getInt(getContext().getContentResolver(),
@@ -228,7 +280,7 @@ public class SlimRecentPanel extends /*Slim*/SettingsPreferenceFragment implemen
         } else {
             mRecentCardTextColor.setSummary(hexColorText);
         }
-        mRecentCardTextColor.setNewPreviewColor(intColorText);
+        mRecentCardTextColor.setNewPreviewColor(intColorText);*/
 
         mRecentPanelScale =
                 (CustomSeekBarPreference) findPreference(RECENT_PANEL_SCALE);
