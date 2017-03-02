@@ -627,4 +627,10 @@
     <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
     <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
 
+    <!-- OmniJaws -->
+    <string name="weather_title">Weather</string>
+    <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary"></string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
+
 </resources>
