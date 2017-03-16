@@ -38,10 +38,6 @@ public class MultiTasking extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "MultiTasking";
 
-    private static final String KEY_GESTURE_ANYWHERE = "gesture_anywhere";
-
-    private PreferenceScreen mGesturesAnywhere;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,17 +45,6 @@ public class MultiTasking extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.multitasking);
 
         ContentResolver resolver = getActivity().getContentResolver();
-
-        /* GesturesAnywhere depends on the overlay.
-         * config_gesture_settings_enabled is defined in Settings/res/values/config.xml
-         * and default is FALSE, devices need to enable overlay
-         */
-        Resources resources = getResources();
-        if (!resources.getBoolean(R.bool.config_gesture_settings_enabled)) {
-            PreferenceScreen prefSet = getPreferenceScreen();
-                mGesturesAnywhere = (PreferenceScreen)prefSet.findPreference(KEY_GESTURE_ANYWHERE);
-                prefSet.removePreference(mGesturesAnywhere);
-        }
     }
 
     @Override
