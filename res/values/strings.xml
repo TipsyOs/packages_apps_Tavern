@@ -241,7 +241,7 @@
     <string name="qs_tile_title_visibility_summary_on">QS tiles titles are now visible</string>
     <string name="qs_tile_title_visibility_summary_off">QS tiles titles are now gone</string>
     <string name="qs_easy_toggle_title">Advanced QS Easy Toggle</string>
-    <string name="qs_easy_toggle_summary">Enable one tap action to enable or disable mobile data, wifi, and bluetooth</string>
+    <string name="qs_easy_toggle_summary">Enable one tap action to enable/disable mobile data, wifi, location and bluetooth</string>
 
     <!-- Tiles animation style  -->
     <string name="quicksettings_tiles_category">Tile animation options</string>
