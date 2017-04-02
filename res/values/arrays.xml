@@ -620,6 +620,8 @@
         <!-- Do not translate. -->
         <item>@string/night_mode_yes</item>
         <!-- Do not translate. -->
+        <item>@string/night_mode_retro</item>
+        <!-- Do not translate. -->
         <item>@string/night_mode_auto</item>
     </string-array>
  
@@ -630,6 +632,8 @@
         <item>1</item>
         <!-- Do not translate. -->
         <item>2</item>
+        <!-- Do not translate. -->
+        <item>3</item>
         <!-- Do not translate. -->
         <item>0</item>
     </string-array>
