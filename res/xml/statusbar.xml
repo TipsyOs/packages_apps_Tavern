@@ -85,4 +85,10 @@
         android:layout="@layout/preference_tap_to_sleep"
         android:title="@string/tap_to_sleep_category" />
 
+    <Preference
+        android:key="statusbar_logo"
+        android:title="@string/status_bar_logo_title"
+        android:layout="@layout/preference_statusbar_logo"
+        android:fragment="com.gzr.tavern.fragments.StatusBarLogo" />
+
 </PreferenceScreen>
