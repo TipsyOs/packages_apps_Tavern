@@ -719,4 +719,40 @@
 	<item>24</item>
     </string-array>
 
+    <!-- Tipsy Logo -->
+    <string-array name="status_bar_logo_style_entries">
+        <item>Tipsy Mug</item>
+        <item>Cheerz Bro</item>
+        <item>Tipsy Letters</item>
+        <item>Tipsy Bottle</item>
+        <item>GZR Skull</item>
+        <item>GZR Circle</item>
+        <item>Clown</item>
+    </string-array>
+
+    <string-array name="status_bar_logo_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <!-- Tipsy Logo Placement -->
+    <string-array name="status_bar_logo_position_entries">
+        <item>Disabled</item>
+        <item>Statusbar Only</item>
+        <item>Lockscreen Only</item>
+        <item>Lockscreen and Statusbar</item>
+    </string-array>
+
+    <string-array name="status_bar_logo_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>
