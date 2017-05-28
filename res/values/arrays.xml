@@ -755,4 +755,14 @@
         <item>3</item>
     </string-array>
 
+    <string-array name="status_bar_logo_location_entries" translatable="false">
+        <item>@string/status_bar_logo_location_left</item>
+        <item>@string/status_bar_logo_location_right</item>
+    </string-array>
+
+    <string-array name="status_bar_logo_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
 </resources>
