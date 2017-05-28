@@ -48,10 +48,12 @@ public class StatusBarLogo extends SettingsPreferenceFragment
 
     private static final String STATUS_BAR_LOGO_POSITION = "status_bar_logo_position";
     private static final String STATUS_BAR_LOGO_STYLE = "status_bar_logo_style";
+    private static final String STATUS_BAR_LOGO_LOCATION = "status_bar_logo_location";
     private static final String STATUS_BAR_LOGO_SIZE = "status_bar_logo_size";
 
     private ListPreference mStatusBarLogoPosition;
     private ListPreference mStatusBarLogoStyle;
+    private ListPreference mStatusBarLogoLoc;
     private CustomSeekBarPreference mStatusBarLogoSize;
 
     @Override
@@ -76,6 +78,14 @@ public class StatusBarLogo extends SettingsPreferenceFragment
         mStatusBarLogoStyle.setValue(String.valueOf(logoStyle));
         mStatusBarLogoStyle.setSummary(mStatusBarLogoStyle.getEntry());
         mStatusBarLogoStyle.setOnPreferenceChangeListener(this);
+
+        mStatusBarLogoLoc = (ListPreference) findPreference(STATUS_BAR_LOGO_LOCATION);
+        int logoLoc = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_TIPSY_LOGO_LOCATION, 0,
+                UserHandle.USER_CURRENT);
+        mStatusBarLogoLoc.setValue(String.valueOf(logoLoc));
+        mStatusBarLogoLoc.setSummary(mStatusBarLogoLoc.getEntry());
+        mStatusBarLogoLoc.setOnPreferenceChangeListener(this);
 
         mStatusBarLogoSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_LOGO_SIZE);
         mStatusBarLogoSize.setValue(Settings.System.getInt(resolver,
@@ -107,6 +117,15 @@ public class StatusBarLogo extends SettingsPreferenceFragment
             mStatusBarLogoStyle.setSummary(
                     mStatusBarLogoStyle.getEntries()[index]);
             return true;
+        } else if (preference == mStatusBarLogoLoc) {
+            int logoLoc = Integer.valueOf((String) newValue);
+            int index = mStatusBarLogoLoc.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(
+                    resolver, Settings.System.STATUS_BAR_TIPSY_LOGO_LOCATION, logoLoc,
+                    UserHandle.USER_CURRENT);
+            mStatusBarLogoLoc.setSummary(
+                    mStatusBarLogoLoc.getEntries()[index]);
+            return true;
         } else if (preference == mStatusBarLogoSize) {
             int width = ((Integer)newValue).intValue();
             Settings.System.putInt(resolver,
@@ -120,9 +139,11 @@ public class StatusBarLogo extends SettingsPreferenceFragment
         if (Settings.System.getInt(getActivity().getContentResolver(),
             Settings.System.STATUS_BAR_TIPSY_LOGO_POSITION, 0) == 0) {
             mStatusBarLogoStyle.setEnabled(false);
+            mStatusBarLogoLoc.setEnabled(false);
             mStatusBarLogoSize.setEnabled(false);
         } else {
             mStatusBarLogoStyle.setEnabled(true);
+            mStatusBarLogoLoc.setEnabled(true);
             mStatusBarLogoSize.setEnabled(true);
 
         }

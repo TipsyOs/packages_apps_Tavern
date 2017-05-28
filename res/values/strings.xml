@@ -649,5 +649,9 @@
     <string name="status_bar_logo_position_title">Logo</string>
     <string name="status_bar_logo_style_title">Logo style</string>
     <string name="status_bar_logo_size_title">Logo size</string>
+    <string name="status_bar_logo_location_title">Placement</string>
+    <string name="status_bar_logo_location_summary">Select where the logo is shown on the statusbar</string>
+    <string name="status_bar_logo_location_right">Show on right (only for statusbar)</string>
+    <string name="status_bar_logo_location_left">Show on left</string>
 
 </resources>
