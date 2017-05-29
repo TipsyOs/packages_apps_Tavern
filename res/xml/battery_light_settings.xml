@@ -32,6 +32,11 @@
             android:dependency="battery_light_enabled"
             android:persistent="false" />
 
+        <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+            android:key="battery_light_only_fully_charged"
+            android:title="@string/battery_light_only_full_charge_title"
+            android:dependency="battery_light_enabled" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
