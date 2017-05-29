@@ -63,7 +63,7 @@
         <com.gzr.tavern.preference.CustomSeekBarPreference
             android:key="weather_number_of_notifications"
             android:title="@string/weather_number_of_notifications_title"
-            android:max="6"
+            settings:max="6"
             settings:min="0"
             android:persistent="false"
             android:dependency="lock_screen_show_weather" />
