@@ -59,6 +59,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_CHARGE_COLOR = "status_bar_charge_color";
     private static final String FORCE_CHARGE_BATTERY_TEXT = "force_charge_battery_text";
     private static final String TEXT_CHARGING_SYMBOL = "text_charging_symbol";
+    private static final String STATUS_BAR_BATTERY_SAVER_COLOR = "status_bar_battery_saver_color";
 
     private static final int STATUS_BAR_BATTERY_STYLE_PORTRAIT = 0;
 
@@ -74,6 +75,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
     private SwitchPreference mForceChargeBatteryText;
     private ListPreference mTextChargingSymbol;
     private int mTextChargingSymbolValue;
+    private ColorPickerPreference mBatterySaverColor;
 
     @Override
     protected int getMetricsCategory() {
@@ -110,6 +112,12 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
         mChargeColor = (ColorPickerPreference) findPreference("status_bar_charge_color");
         mChargeColor.setNewPreviewColor(chargeColor);
         mChargeColor.setOnPreferenceChangeListener(this);
+
+        int batterySaverColor = Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_SAVER_COLOR, 0xfff4511e);
+        mBatterySaverColor = (ColorPickerPreference) findPreference("status_bar_battery_saver_color");
+        mBatterySaverColor.setNewPreviewColor(batterySaverColor);
+        mBatterySaverColor.setOnPreferenceChangeListener(this);
 
         mStatusBarBatteryShowPercent =
                 (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
@@ -180,6 +188,11 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
             Settings.Secure.putInt(resolver,
                     Settings.Secure.TEXT_CHARGING_SYMBOL, mTextChargingSymbolValue);
             return true;
+        } else if (preference.equals(mBatterySaverColor)) {
+            int color = ((Integer) newValue).intValue();
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.STATUS_BAR_BATTERY_SAVER_COLOR, color);
+            return true;
         }
         return false;
     }
@@ -197,6 +210,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
             mForceChargeBatteryText.setEnabled(false);
             mChargeColor.setEnabled(false);
             mTextChargingSymbol.setEnabled(true);
+            mBatterySaverColor.setEnabled(false);
         } else if (mStatusBarBatteryValue == STATUS_BAR_BATTERY_STYLE_PORTRAIT) {
             mStatusBarBatteryShowPercent.setEnabled(true);
             mQsBatteryTitle.setEnabled(false);
@@ -209,6 +223,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
             //mTextChargingSymbol.setEnabled((mStatusBarBatteryShowPercentValue == 0 && !mForceChargeBatteryText.isChecked())
             //|| (mStatusBarBatteryShowPercentValue == 1 && !mForceChargeBatteryText.isChecked()) ? false : true);
             mTextChargingSymbol.setEnabled(true);
+            mBatterySaverColor.setEnabled(true);
         } else {
             mStatusBarBatteryShowPercent.setEnabled(true);
             mQsBatteryTitle.setEnabled(true);
@@ -217,6 +232,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
             //mTextChargingSymbol.setEnabled((mStatusBarBatteryShowPercentValue == 0 && !mForceChargeBatteryText.isChecked())
             //|| (mStatusBarBatteryShowPercentValue == 1 && !mForceChargeBatteryText.isChecked()) ? false : true);
             mTextChargingSymbol.setEnabled(true);
+            mBatterySaverColor.setEnabled(true);
         }
     }
 
