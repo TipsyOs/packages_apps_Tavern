@@ -43,9 +43,9 @@ public class ColorPickerDialog
     private ColorPickerPanelView mOldColor;
     private ColorPickerPanelView mNewColor;
 
-    private ColorPickerPanelView mWhite;
-    private ColorPickerPanelView mBlack;
-    private ColorPickerPanelView mCyan;
+    private ColorPickerPanelView mTesla;
+    private ColorPickerPanelView mTipsy;
+    private ColorPickerPanelView mValidus;
     private ColorPickerPanelView mRed;
     private ColorPickerPanelView mGreen;
     private ColorPickerPanelView mYellow;
@@ -88,9 +88,9 @@ public class ColorPickerDialog
         mOldColor = (ColorPickerPanelView) layout.findViewById(R.id.old_color_panel);
         mNewColor = (ColorPickerPanelView) layout.findViewById(R.id.new_color_panel);
 
-        mWhite = (ColorPickerPanelView) layout.findViewById(R.id.white_panel);
-        mBlack = (ColorPickerPanelView) layout.findViewById(R.id.black_panel);
-        mCyan = (ColorPickerPanelView) layout.findViewById(R.id.cyan_panel);
+        mTesla = (ColorPickerPanelView) layout.findViewById(R.id.tesla_panel);
+        mTipsy = (ColorPickerPanelView) layout.findViewById(R.id.tipsy_panel);
+        mValidus = (ColorPickerPanelView) layout.findViewById(R.id.validus_panel);
         mRed = (ColorPickerPanelView) layout.findViewById(R.id.red_panel);
         mGreen = (ColorPickerPanelView) layout.findViewById(R.id.green_panel);
         mYellow = (ColorPickerPanelView) layout.findViewById(R.id.yellow_panel);
@@ -111,9 +111,9 @@ public class ColorPickerDialog
         mOldColor.setColor(color);
         mColorPicker.setColor(color, true);
 
-        setColorAndClickAction(mWhite, Color.WHITE);
-        setColorAndClickAction(mBlack, Color.BLACK);
-        setColorAndClickAction(mCyan, 0xff33b5e5);
+        setColorAndClickAction(mTesla, 0xff33b5e5);
+        setColorAndClickAction(mTipsy, 0xfff1d744);
+        setColorAndClickAction(mValidus, 0xff009688);
         setColorAndClickAction(mRed, Color.RED);
         setColorAndClickAction(mGreen, Color.GREEN);
         setColorAndClickAction(mYellow, Color.YELLOW);
