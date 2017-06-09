@@ -71,21 +71,21 @@
         android:layout_marginTop="2dp">
 
         <net.margaritov.preference.colorpicker.ColorPickerPanelView
-            android:id="@+id/white_panel"
+            android:id="@+id/tesla_panel"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_marginRight="6dp"
             android:layout_weight="0.5" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPanelView
-            android:id="@+id/black_panel"
+            android:id="@+id/tipsy_panel"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_marginRight="6dp"
             android:layout_weight="0.5" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPanelView
-            android:id="@+id/cyan_panel"
+            android:id="@+id/validus_panel"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_marginRight="6dp"
