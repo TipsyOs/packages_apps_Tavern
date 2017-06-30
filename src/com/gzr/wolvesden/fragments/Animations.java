@@ -70,9 +70,6 @@ import com.android.settings.R;
         private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
         private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
         private static final String KEY_TOAST_ANIMATION = "toast_animation";
-        private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
-        private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
-        private static final String SCROLLINGCACHE_DEFAULT = "1";
 
         ListPreference mActivityOpenPref;
         ListPreference mActivityClosePref;
@@ -92,7 +89,6 @@ import com.android.settings.R;
         private ListPreference mListViewAnimation;
         private ListPreference mListViewInterpolator;
         private ListPreference mToastAnimation;
-        private ListPreference mScrollingCachePref;
         private Context mContext;
 
         @Override
@@ -208,12 +204,6 @@ import com.android.settings.R;
             mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
             mToastAnimation.setOnPreferenceChangeListener(this);
 
-            // Scrolling cache
-            mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
-            mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
-                    SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
-            mScrollingCachePref.setOnPreferenceChangeListener(this);
-
             return;
         }
 
@@ -305,12 +295,6 @@ import com.android.settings.R;
                 mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
                 Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
                 return true;
-            } else if (preference == mScrollingCachePref) {
-                if (newValue != null) {
-                    SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
-                return true;
-                }
-                return false;
             }
 
             // Come here, for the System Animations

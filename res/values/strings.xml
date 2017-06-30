@@ -49,12 +49,12 @@
 
     <!-- Tabs -->
     <string name="system_category">System</string>
-    <string name="lockscreen_category">Lockscreen</string>
+    <string name="lockscreen_category">Lock screen</string>
     <string name="heads_up_category">Heads up</string>
-    <string name="statusbar_category">Status Bar</string>
+    <string name="statusbar_category">Status bar</string>
     <string name="navigation_category">Navigation</string>
     <string name="multitasking_category">Multi-Tasking</string>
-    <string name="statusbar_notifications_category">Statusbar notifications</string>
+    <string name="statusbar_notifications_category">Status bar notifications</string>
 
     <!-- Categories -->
     <string name="animations">Animations</string>
@@ -62,15 +62,16 @@
     <string name="button_settings">Button settings</string>
     <string name="carrier_label_category">Carrier label</string>
     <string name="statusbar_notifications_category">Notifications</string>
-    <string name="statusbar_items_category">Statusbar items</string>
+    <string name="statusbar_items_category">Indicators</string>
     <string name="nightmode_category">Night mode</string>
     <string name="quicksettings_category">Quick settings</string>
     <string name="recents_category">Recents</string>
     <string name="traffic_category">Traffic indicators</string>
-    <string name="breathing_notifications_category">Breathing Notifications</string>
+    <string name="breathing_notifications_category">Breathing notifications</string>
     <string name="omniswitch_category">OmniSwitch</string>
     <string name="lockscreen_interface_category">Interface</string>
-    <string name="weather_cat_lockscreen">Lockscreen</string>
+    <string name="weather_cat_lockscreen">Lock screen</string>
+    <string name="qs_general_category">General tweaks</string>
 
     <!-- OmniStyles WallpaperPicker -->   
     <string name="custom_wall_browse_title">Validus Wallpapers</string>
@@ -128,11 +129,11 @@
     <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
     <string name="volume_keys_control_media_stream_summary">Force volume keys to control media stream</string>
 
-    <!-- Lockscreen Torch -->
-    <string name="keyguard_torch_title">Lockscreen torch</string>
-    <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
+    <!-- Lock screen torch -->
+    <string name="keyguard_torch_title">Torch quick toggle</string>
+    <string name="keyguard_torch_summary">Long-press power button while screen is off to turn on flashlight</string>
 
-    <!-- OmniSwitch Recents -->
+    <!-- OmniSwitch recents -->
     <string name="aosp_recents_title">AOSP recents</string>
     <string name="omniswitch_recents_title">OmniSwitch recents</string>
     <string name="recents_use_omniswitch_title">Use for a recents alterative</string>
@@ -142,8 +143,8 @@
     <string name="omniswitch_first_time_title">Warning</string>
     <string name="omniswitch_first_time_message">If using OmniSwitch as recents alterative, make sure you have OmniSwitch enabled</string>
 
-    <!-- Power Menu -->
-    <string name="powermenu_category">Power Menu</string>
+    <!-- Power menu -->
+    <string name="powermenu_category">Power menu</string>
     <string name="powermenu_lockscreen_title">Power menu on lock screen</string>
     <string name="powermenu_lockscreen_summary">Show power menu on the lock screen</string>
     <string name="powermenu_power">Power</string>
@@ -161,7 +162,7 @@
     <string name="powermenu_dialog_dim">Dialog dim background amount</string>
 
     <!-- Power menu Animations  -->
-    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_title">Animation</string>
     <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
     <string name="power_menu_animation_dialog_title">Select power menu animation</string>
     <string name="power_menu_animation_aosp">AOSP (default)</string>
@@ -182,16 +183,16 @@
     <string name="immersive_recents_dialog_title">Select recents view</string>
     <string name="immersive_recents_default">Default</string>
     <string name="immersive_recents_fullscreen">Fullscreen</string>
-    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_statusbar">Status bar only</string>
     <string name="immersive_recents_navbar">Navbar only</string>
 
-    <!-- Quick Settings on lockscreen -->
-    <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
-    <string name="lockscreen_qs_disabled_summary">Disable the quick settings on secure lock screens</string>
+    <!-- Quick Settings on lock screen -->
+    <string name="lockscreen_qs_disabled_title">Disable Quick Settings when locked</string>
+    <string name="lockscreen_qs_disabled_summary">Disable the Quick Settings on secure lock screens</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
-    <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
+    <string name="qs_brightness_slider_summary">Show a brightness slider in the Quick Settings panel</string>
 
     <string name="brightness_icon_title">Brightness icon </string>
     <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
@@ -200,35 +201,35 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
-    <string name="status_bar_battery_saver_color_title">Statusbar battery saver color</string>
-    <string name="status_bar_battery_saver_color_summary">Note: If battery saver already enabled, for new color be effective, disbale and renable battery saver!</string>
+    <string name="status_bar_battery_saver_color_title">Status bar battery saver color</string>
+    <string name="status_bar_battery_saver_color_summary">Note: If battery saver is already enabled, for new color be effective, disable and re-enable battery saver!</string>
 
-    <!-- Notification Count in Statusbar -->
+    <!-- Notification count in status bar -->
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
-    <!-- Breathing Notifications -->
+    <!-- Breathing notifications -->
     <string name="breathing_notifications_title">Breathing notifications</string>
     <string name="missed_call_breath_title">Breathing Missed Call</string>
-    <string name="missed_call_breath_summary">Will give your missed call notifications a breathing effect in the statusbar</string>
+    <string name="missed_call_breath_summary">Will give your missed call notifications a breathing effect in the status bar</string>
     <string name="voicemail_breath_title">Breathing Voicemail</string>
-    <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the statusbar</string>
+    <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the status bar</string>
     <string name="sms_breath_title">Breathing SMS</string>
-    <string name="sms_breath_summary">Will give your SMS notifications a breathing effect in the statusbar</string>
+    <string name="sms_breath_summary">Will give your SMS notifications a breathing effect in the status bar</string>
 
     <!-- Power notification controls -->
     <string name="power_notification_controls_title">Power notification controls</string>
     <string name="power_notification_controls_summary">Select importance level for notifications</string>
 
     <!-- Force expanded notifications -->
-    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_title">Force expanded notifications</string>
     <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
 
     <!-- Disabling immersive mode messages -->
-    <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
-    <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
+    <string name="disable_immersive_message_title">Disable immersive mode messages</string>
+    <string name="disable_immersive_message_summary">This will hide all immersive mode messages</string>
 
-    <!-- Scrolling Cache -->
+    <!-- Scrolling cache -->
     <string name="pref_scrollingcache_title">Scrolling cache</string>
     <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
     <string name="pref_scrollingcache_force_enable">Force enable</string>
@@ -245,7 +246,7 @@
     <string name="qs_tile_title_visibility_title">QS tile titles</string>
     <string name="qs_tile_title_visibility_summary_on">QS tiles titles are now visible</string>
     <string name="qs_tile_title_visibility_summary_off">QS tiles titles are now gone</string>
-    <string name="qs_easy_toggle_title">Advanced QS Easy Toggle</string>
+    <string name="qs_easy_toggle_title">Advanced QS easy toggle</string>
     <string name="qs_easy_toggle_summary">Enable one tap action to enable/disable mobile data, wifi, location and bluetooth</string>
 
     <!-- Tiles animation style  -->
@@ -298,7 +299,7 @@
     <string name="network_traffic_hidearrow">Hide arrows</string>
     <string name="network_traffic_hidearrow_summary">Hide the arrows in the traffic indicators</string>
 
-    <!-- Quick Pulldown-->
+    <!-- Quick pulldown-->
     <string name="quick_pulldown_title">Quick pulldown</string>
     <string name="quick_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
     <string name="quick_pulldown_summary_always">Always show Quick Settings on status bar pulldown</string>
@@ -307,8 +308,8 @@
     <string name="quick_pulldown_right">Right</string>
     <string name="quick_pulldown_always">Always</string>
 
-    <!-- Statusbar Clock options -->
-    <string name="status_bar_clock">Clock &amp; Date</string>
+    <!-- Status bar clock options -->
+    <string name="status_bar_clock">Clock &amp; date</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="status_bar_show_clock_title">Show clock &amp; date</string>
     <string name="status_bar_clock_seconds_title">Show seconds</string>
@@ -568,7 +569,7 @@
     <string name="hardware_keys_light_timeout_title">Set backlight timeout</string>
 
     <!-- Expanded desktop -->
-    <string name="expanded_desktop_category">Expanded Desktop</string>
+    <string name="expanded_desktop_category">Expanded desktop</string>
     <string name="expanded_hide_nothing">Hide nothing</string>
     <string name="expanded_hide_status">Hide status bar</string>
     <string name="expanded_hide_navigation">Hide navigation bar</string>
@@ -581,20 +582,21 @@
     <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
     <string name="expanded_desktop_title">Expanded desktop options</string>
 
-    <!-- Custom Carrier Label -->
+    <!-- Custom carrier label -->
     <string name="custom_carrier_label_title">Custom carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
     <string name="show_carrier_title">Carrier label</string>
     <string name="show_carrier_disabled">Disabled</string>
-    <string name="show_carrier_keyguard">Lockscreen only</string>
-    <string name="show_carrier_statusbar">Statusbar only</string>
-    <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
+    <string name="show_carrier_keyguard">Lock screen only</string>
+    <string name="show_carrier_statusbar">Status bar only</string>
+    <string name="show_carrier_enabled">Lock screen &amp; status bar</string>
     <string name="status_bar_carrier_color">Carrier label color</string>
-    <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
+    <string name="status_bar_carrier_font_style_title">Carrier label font</string>
 
-    <!-- Lockscreen Shortcuts -->
+    <!-- Lock screen shortcuts -->
     <string name="lockscreen_targets_title">Bottom L/R shortcuts</string>
+    <string name="lockscreen_targets_summary">Edit the bottom L/R shortcuts</string>
 
     <!-- Optional screenshot type -->
     <string name="screenshot_type_title">Screenshot type</string>
@@ -607,12 +609,12 @@
     <string name="screenshot_delay_summary">Adjust the time for when a screenshot is captured</string>
 
     <!-- Battery customizations -->
-    <string name="status_bar_battery_style_category">Battery</string>
+    <string name="status_bar_battery_style_category">Battery indicator</string>
     <string name="status_bar_battery_style_title">Battery status style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
     <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
     <string name="status_bar_battery_style_circle">Circle</string>
-    <string name="status_bar_battery_style_bigcircle">Big Circle</string>
+    <string name="status_bar_battery_style_bigcircle">Big circle</string>
     <string name="status_bar_battery_style_text">Text</string>
     <string name="status_bar_battery_style_hidden">Hidden</string>
     <string name="status_bar_battery_style_solid">Solid</string>
@@ -621,13 +623,13 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
     <string name="status_bar_battery_style_tile_title">Custom battery tile style</string>
-    <string name="status_bar_battery_style_tile_summary">Allow to set the same icon style chosen for the statusbar battery</string>
-    <string name="status_bar_charge_color_summary">Set the color of the statusbar battery icon while charging</string>
-    <string name="force_charge_battery_text_title">Statusbar battery charging percent</string>
+    <string name="status_bar_battery_style_tile_summary">Allow to set the same icon style chosen for the status bar battery</string>
+    <string name="status_bar_charge_color_summary">Set the color of the status bar battery icon while charging</string>
+    <string name="force_charge_battery_text_title">Status bar battery charging percent</string>
     <string name="force_charge_battery_text_summary_on">Show the battery percentage outside the icon while charging</string>
     <string name="force_charge_battery_text_summary_off">Show the battery percentage inside the icon while charging</string>
     <string name="text_charging_symbol_title">Charging symbol near percentage text</string>
-    <string name="text_charging_symbol_dialog">Show a symbol near percentage text outside the battery icon when charging</string>
+    <string name="text_charging_symbol_dialog">Show symbol near percentage text next to battery icon when charging</string>
     <string name="text_charging_symbol_default">Disabled</string>
     <string name="text_charging_symbol_flash">Flash</string>
     <string name="text_charging_symbol_tilde">Tilde</string>
@@ -648,8 +650,8 @@
 
     <!-- PA Pie control -->
     <string name="pa_piecontrol_settings_summary">Customize Pie targets, sytle, size and color</string>
-    <string name="pa_pie_control_title">Pie Control</string>
-    <string name="pa_pie_control_enable_title">Enable Pie Control</string>
+    <string name="pa_pie_control_title">Pie control</string>
+    <string name="pa_pie_control_enable_title">Enable Pie control</string>
     <string name="pa_pie_targets_title">Pie Targets</string>
     <string name="pa_pie_style_title">Pie Style</string>
     <string name="pa_pie_menu_title">Always show menu button</string>
@@ -743,13 +745,13 @@
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
 
-    <!-- Lockscreen categories -->
+    <!-- Lock screen categories -->
     <string name="lockscreen_shortcuts_category">Shortcuts</string>
     <string name="lockscreen_interface_category">Interface</string>
     <string name="lockscreen_gestures_category">Gestures</string>
     <string name="lockscreen_misc_category">Miscellaneous</string>
 
-    <!-- Lockscreen shortcuts -->
+    <!-- Lock screen shortcuts -->
     <string name="lockscreen_shortcuts_title">Screen shortcuts</string>
     <string name="lockscreen_shortcuts_summary">Add shortcuts to the center</string>
     <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
@@ -920,9 +922,9 @@
 
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
-    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+    <string name="media_art_summary">Enable media cover art on the lock screen</string>
 
-    <!-- Hide Lockscreen clock, date & alarm -->
+    <!-- Hide lock screen clock, date & alarm -->
     <string name="hide_lockscreen_clock_title">Clock widget</string>
     <string name="hide_lockscreen_clock_summary_on">Clock widget showing on the keyguard</string>
     <string name="hide_lockscreen_clock_summary_off">Clock widget hidden on the keyguard</string>
@@ -950,16 +952,20 @@
     <string name="battery_bar_style_regular">Regular</string>
     <string name="battery_bar_style_center_mirrored">Center-mirrored</string>
     <string name="battery_bar_style_reversed">Reversed</string>
+    <string name="battery_bar_entry_1">Hide</string>
+    <string name="battery_bar_entry_2">Status bar</string>
+    <string name="battery_bar_entry_3">Top of navbar</string>
+    <string name="battery_bar_entry_4">Bottom of navbar</string>
 
-    <!-- double tap statusbar to sleep -->
+    <!-- Double tap status bar to sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 
-    <!-- Lockscreen double tap to sleep -->
+    <!-- Lock screen double tap to sleep -->
     <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
-    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
+    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lock screen to put the device to sleep</string>
 
-    <!-- lock screen visualizer -->
+    <!-- Lock screen visualizer -->
     <string name="visualizer_title">Visualizer settings</string>
     <string name="visualizer_settings_title">Music visualizer</string>
     <string name="lockscreen_visualizer_title">Lockscreen visualizer</string>
@@ -1014,7 +1020,7 @@
     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
     <!-- AOKP custom system animations -->
-    <string name="system_animation_title">System Animations</string>
+    <string name="system_animation_title">System animations</string>
     <string name="activity_open_title">Activity open animation</string>
     <string name="activity_close_title">Activity close animation</string>
     <string name="task_open_title">Task open animation</string>
@@ -1029,42 +1035,42 @@
     <string name="animation_duration_title">Animation duration</string>
     <string name="animation_duration_default">Default</string>
 
-    <!-- Lockscreen battery info indicator  -->
-    <string name="lockscreen_battery_info_title">Lockscreen battery info</string>
-    <string name="lockscreen_battery_info_summary">Display real time charger current, voltage and battery temperature on lockscreen while charging</string>
+    <!-- Lock screen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Battery info</string>
+    <string name="lockscreen_battery_info_summary">Display real time charger current, voltage, and battery temperature on lock screen while charging</string>
 
-    <!-- XOSP Blur personalizations -->
+    <!-- XOSP blur personalizations -->
     <string name="settings_blur_cat">Blur</string>
-    <string name="blurred_status_bar_expanded_enabled_pref">Blur StatusBar Background</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Blur status bar background</string>
     <string name="blurred_status_bar_expanded_enabled_pref_summary">Blur the background when you pull down the status bar</string>
-    <string name="translucent_notifications_pref">Translucent Notifications</string>
+    <string name="translucent_notifications_pref">Translucent notifications</string>
     <string name="translucent_notifications_pref_summary">Set the background of notifications translucent</string>
-    <string name="translucent_quick_settings_pref">Blurred Expanded StatusBar</string>
-    <string name="translucent_quick_settings_pref_summary">Blur the background of expanded status bar </string>
+    <string name="translucent_quick_settings_pref">Blur expanded status bar</string>
+    <string name="translucent_quick_settings_pref_summary">Blur the background of the expanded status bar </string>
     <string name="transluency_level_universal">Translucency level</string>
-    <string name="blurred_recent_app_enabled_pref">Blurred Recent Apps</string>
-    <string name="blurred_recent_app_enabled_pref_summary">Blur the background of Recent Apps activity</string>
+    <string name="blurred_recent_app_enabled_pref">Blur recent apps</string>
+    <string name="blurred_recent_app_enabled_pref_summary">Blur the background of the recent apps activity</string>
 
     <string name="blur_light_color">Light image color filter</string>
     <string name="blur_dark_color">Dark image color filter</string>
     <string name="blur_mixed_color">Mixed image color filter</string>
 
-    <string name="blur_notice">About Blur...</string>
-    <string name="blur_notice_summary">Blur personlizations are disabled during Keyguard view! Only Translucent Notifications are enabled!</string>
+    <string name="blur_notice">About blur...</string>
+    <string name="blur_notice_summary">Blur personlizations are disabled during keyguard view! Only translucent notifications are enabled!</string>
     <string name="blur_colors_notice">What are these colors doing?</string>
-    <string name="blur_colors_notice_summary">These colors are the ones tiniting the BlurBackground. Instead of the normal Grey, you can now choose the colors in the way you like. \n There are three color filters: One used for light backgrounds, one used for Dark backgrounds and one used for light/dark backgrounds. \n So how are these colors working?? \n Simple, as the titles say, the Light filter will be used for Lighter backgrounds, Dark filter for dark backgrounds and the mixed filter one will be used for backgrounds not too dark but neither too light. \n These colors are used for both BlurBackgrounds: StatusBar one and RecentsApps one </string>
+    <string name="blur_colors_notice_summary">    These colors are the ones tinting the blur background. Instead of the normal grey, you can now choose the colors in the way you like. There are three color filters: One used for light backgrounds, one used for dark backgrounds, and one used for light/dark backgrounds. So how are these colors working? \n    The answer is simple. As the titles say, the light filter will be used for lighter backgrounds, the dark filter for dark backgrounds, and the mixed filter for backgrounds neither too dark nor too light. These colors are used for both the status bar and recent apps blur backgrounds.</string>
 
-    <string name="blur_expstatus_cat">Expanded StatusBar </string>
+    <string name="blur_expstatus_cat">Expanded status bar </string>
     <string name="blur_notifications_cat">Notifications</string>
     <string name="blur_qs_cat">Quick Settings</string>
-    <string name="blur_recents_cat">Recent Apps</string> 
-    <string name="blur_colors_cat">Blur Color filters</string>
+    <string name="blur_recents_cat">Recent apps</string> 
+    <string name="blur_colors_cat">Blur color filters</string>
     <string name="blur_notices_cat">Notices</string>
 
-    <string name="blurred_scale">Blur Scale</string>
+    <string name="blurred_scale">Blur scale</string>
     <string name="blurred_scale_summary">Quailty of blur image</string>
 
-    <string name="blurred_radius">Blur Radius</string>
+    <string name="blurred_radius">Blur radius</string>
     <string name="blurred_radius_summary">Amount of blur</string>
 
     <string name="blur_cat_notice">Notice</string>
@@ -1073,14 +1079,14 @@
     <!-- Weather in status bar -->
     <string name="status_bar_show_weather_title">Show weather</string>
     <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
-    <string name="weather_cat_statusbar_title">Statusbar</string>
+    <string name="weather_cat_statusbar_title">Status bar</string>
 
-    <!-- Lockscreen weather -->
+    <!-- Lock screen weather -->
     <string name="lockscreen_weather_title">Weather</string>
     <string name="lock_screen_weather_settings_title">Weather options</string>
     <string name="weather_cat_notifications_title">Notifications</string>
     <string name="weather_show_weather_title">Show weather</string>
-    <string name="weather_show_weather_summary">Display weather on lockscreen</string>
+    <string name="weather_show_weather_summary">Display weather on lock screen</string>
     <string name="weather_show_location_title">Show location</string>
     <string name="weather_show_location_summary">Enable to show the location</string>
     <string name="weather_show_timestamp_title">Show timestamp</string>
@@ -1108,12 +1114,12 @@
 
     <!-- Status bar temperature -->
     <string name="weather_category">Weather Settings</string>
-    <string name="status_bar_temperature_title">Statusbar weather temperature</string>
+    <string name="status_bar_temperature_title">Weather temperature</string>
     <string name="status_bar_temperature_hidden">Hidden</string>
     <string name="status_bar_temperature_show_scale">Shown with scale</string>
     <string name="status_bar_temperature_hide_scale">Shown without scale</string>
     <string name="status_bar_temperature_location_title">Placement</string>
-    <string name="status_bar_temperature_location_summary">Select where the weather temperature is shown on the statusbar</string>
+    <string name="status_bar_temperature_location_summary">Select where the weather temperature is shown on the status bar</string>
     <string name="status_bar_temperature_location_right">Show on right</string>
     <string name="status_bar_temperature_location_left">Show on left</string>
     <string name="status_bar_weather_color_title">Temperature color</string>
@@ -1145,24 +1151,24 @@
     <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
     <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>	
 
-    <!-- QS Header Icons -->
+    <!-- QS header icons -->
+    <string name="qs_headers_category">Header tweaks</string>
     <string name="header_title">Header</string>
     <string name="header_summary">Customize various elements in header</string>
-    <string name="qs_header_items_title">Header Items</string>
-    <string name="qs_settings_icon_title">Settings Shortcut</string>
+    <string name="qs_header_items_title">Header items</string>
+    <string name="qs_settings_icon_title">Settings shortcut</string>
     <string name="qs_settings_icon_summary">Disable the settings shortcut in the header</string>
-    <string name="qs_edit_title">Edit Icon</string>
+    <string name="qs_edit_title">Edit icon</string>
     <string name="qs_edit_summary">Disable the tile edit icon in the header</string>
-    <string name="qs_multiuser_switch_title">Multi-user Switch</string>
+    <string name="qs_multiuser_switch_title">Multi-user switch</string>
     <string name="qs_multiuser_switch_summary">Disable the multi-user switch in the header</string>
     <string name="qs_expand_indicator_title">Expand indicator</string>
     <string name="qs_expand_indicator_summary">Disable the expand indicator in the header</string>
-
     <string name="qs_running_services_title">Running services</string>
     <string name="qs_running_services_summary">Disable the running services switch in the header</string>
 
-    <!-- Center Date + Time in header -->
-    <string name="qs_date_time_center_title">Center Date and Time</string>
+    <!-- Center date and time in header -->
+    <string name="qs_date_time_center_title">Center date and time</string>
     <string name="qs_date_time_center_summary">Requires one or more icons to be disabled</string>
 
     <!-- Header images -->
@@ -1179,13 +1185,13 @@
     <string name="custom_header_browse_title">Browse installed headers</string>
     <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
 
-    <!-- qqs scroller -->
+    <!-- QS scroller -->
     <string name="qqs_scroll_title">Scroll small QS tiles</string>
     <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
 
-    <!-- Status Bar Ticker -->
+    <!-- Status bar ticker -->
     <string name="ticker_screen_title">Ticker</string>
-    <string name="ticker_title">Status Bar Ticker</string>
+    <string name="ticker_title">Status bar ticker</string>
     <string name="ticker_screen_summary">Customize the ticker style</string>
     <string name="ticker_summary">Enable the old status bar ticker</string>
     <string name="ticker_restore_defaults_title">Restore defaults</string>
@@ -1307,11 +1313,11 @@
     <string name="one_handed_mode_title">One handed mode</string>
     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
 
-    <!-- Lock Clock Fonts -->
-    <string name="lockscreen_colors_fonts_category_title">Colors and Fonts</string>
-    <string name="lock_clock_font_title">Lock Clock</string>
+    <!-- Lock Clock fonts -->
+    <string name="lockscreen_colors_fonts_category_title">Colors and fonts</string>
+    <string name="lock_clock_font_title">Lock Clock font</string>
     <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
-    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
+    <string name="lock_clock_font_dialog_title">Select the lock clock font</string>
     <string name="lock_clock_font_stock">Normal (default)</string>
     <string name="lock_clock_font_bold">Bold</string>
     <string name="lock_clock_font_italic">Italic</string>
@@ -1325,19 +1331,19 @@
     <string name="lock_clock_font_medium_normal">Medium</string>
     <string name="lock_clock_font_medium_italic">Medium Italic</string>
 
-    <!-- Lockscreen Colors -->
-    <string name="lockscreen_colors_title">Lockscreen colors</string>
+    <!-- Lock screen colors -->
+    <string name="lockscreen_colors_title">Lock screen colors</string>
     <string name="lockscreen_owner_info_color">Owner info</string>
     <string name="lockscreen_alarm_color">Alarm</string>
     <string name="lockscreen_clock_color">Clock</string>
     <string name="lockscreen_clock_date_color">Date</string>
-    <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
+    <string name="lockscreen_colors_reset_title">Reset lock screen colors</string>
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
     <string name="yes">YES</string>
 
-    <!-- Keyguard Statusbar Clock -->
-    <string name="keyguard_statusbar_clock_title">Keyguard statusbar clock</string>
-    <string name="keyguard_statusbar_clock_summary">Show the left statusbar clock on the keyguard</string>
+    <!-- Keyguard status bar clock -->
+    <string name="keyguard_statusbar_clock_title">Status bar clock</string>
+    <string name="keyguard_statusbar_clock_summary">Show the left status bar clock on the lock screen</string>
 
     <!-- Slim Recent panel -->
     <string name="slim_recents_title">Slim recents</string>
@@ -1361,7 +1367,7 @@
     <string name="recent_reset_title">Reset to stock color</string>
     <string name="recent_reset_confirm">Are you sure you want to reset Slim Recent to stock color?</string>
     <string name="default_auto_string">Default (app based)</string>
-    <string name="slim_icon_pack_title">Icon Pack</string>
+    <string name="slim_icon_pack_title">Icon pack</string>
     <string name="slim_icon_pack_summary">Apply a custom icon pack for apps in the panel</string>
     <string name="no_iconpacks_summary">No icon packs installed</string>
     <string name="dialog_pick_iconpack_title">Pick icon pack</string>
@@ -1375,7 +1381,7 @@
     <!-- OmniJaws -->
     <string name="weather_title">Weather</string>
     <string name="weather_config_title">Service settings</string>
-    <string name="weather_config_summary"></string>
+    <string name="weather_config_summary">Configure the weather tile in the Quick Settings panel</string>
     <string name="weather_icon_pack_title">Condition icon pack</string>
 
     <!-- LED notifications -->
@@ -1396,7 +1402,6 @@
     <string name="battery_light_full_color_title">Charged (90%)</string>
     <string name="battery_light_really_full_color_title">Charged (100%)</string>
     <string name="edit_battery_settings">Edit battery settings</string>
-    <string name="notification_light_general_title">General</string>
     <string name="led_color_green">Green</string>
     <string name="led_color_red">Red</string>
     <string name="led_color_blue">Blue</string>

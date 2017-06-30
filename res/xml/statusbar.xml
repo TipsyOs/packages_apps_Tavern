@@ -35,15 +35,15 @@
         android:title="@string/status_bar_temperature_title"
         android:fragment="com.gzr.wolvesden.fragments.StatusBarWeather" />
 
-     <PreferenceScreen
-        android:key="status_bar_battery_style"
-        android:title="@string/status_bar_battery_style_category"
-        android:fragment="com.gzr.wolvesden.fragments.StatusbarBatteryStyle" />
-
     <PreferenceScreen
         android:key="batterybar"
         android:fragment="com.gzr.wolvesden.fragments.BatteryBar"
         android:title="@string/battery_bar_title" />
+
+     <PreferenceScreen
+        android:key="status_bar_battery_style"
+        android:title="@string/status_bar_battery_style_category"
+        android:fragment="com.gzr.wolvesden.fragments.StatusbarBatteryStyle" />
 
      <Preference
         android:key="statusbarclock"
@@ -56,9 +56,9 @@
         android:title="@string/carrier_label_category" />
 
     <Preference
-       android:key="statusbar_notifications"
-       android:fragment="com.gzr.wolvesden.fragments.StatusbarNotifications"
-       android:title="@string/statusbar_notifications_category" />
+        android:key="statusbar_notifications"
+        android:fragment="com.gzr.wolvesden.fragments.StatusbarNotifications"
+        android:title="@string/statusbar_notifications_category" />
 
     <Preference
         android:key="quicksettings"
@@ -71,8 +71,15 @@
         android:title="@string/traffic_category" />
 
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
-           android:key="double_tap_sleep_gesture"
-           android:title="@string/double_tap_to_sleep_title"
-           android:summary="@string/double_tap_to_sleep_summary"
-           android:defaultValue="true" />
+        android:key="status_bar_brightness_control"
+        android:title="@string/status_bar_toggle_brightness"
+        android:summary="@string/status_bar_toggle_brightness_summary"
+        android:defaultValue="false" />
+
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/double_tap_to_sleep_title"
+        android:summary="@string/double_tap_to_sleep_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
