@@ -33,6 +33,7 @@
         android:key="smartbar_doubletap_sleep"
         android:title="@string/smartbar_doubletap_sleep_title"
         android:summary="@string/smartbar_doubletap_sleep_summary"
+        android:dependency="navbar_visibility"
         android:defaultValue="true" />
 
     <PreferenceCategory

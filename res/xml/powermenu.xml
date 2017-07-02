@@ -27,14 +27,6 @@
             android:dependency="powermenu_reboot"
             android:persistent="false" />
 
-         <com.gzr.wolvesden.preference.CustomSeekBarPreference
-            android:key="power_reboot_dialog_dim"
-            android:title="@string/powermenu_dialog_dim"
-            android:max="100"
-            settings:min="0"
-            settings:units=""
-            android:persistent="false" />
-
          <ListPreference
             android:key="power_menu_animations"
             android:title="@string/power_menu_animation_title"
@@ -42,6 +34,14 @@
             android:entries="@array/power_menu_animations_entries"
             android:entryValues="@array/power_menu_animations_values"
             android:summary="@string/power_menu_animation_summary"
+            android:persistent="false" />
+
+         <com.gzr.wolvesden.preference.CustomSeekBarPreference
+            android:key="power_reboot_dialog_dim"
+            android:title="@string/powermenu_dialog_dim"
+            android:max="100"
+            settings:min="0"
+            settings:units=""
             android:persistent="false" />
 
          <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
