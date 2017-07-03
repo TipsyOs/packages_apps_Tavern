@@ -18,13 +18,13 @@
             android:key="stock_recents"
             android:title="@string/aosp_recents_title" >
 
-          <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
             android:key="recents_use_grid"
             android:title="@string/recents_use_grid_title"
             android:summary="@string/recents_use_grid_summary"
             android:defaultValue="true" />
 
-         <ListPreference
+        <ListPreference
             android:key="immersive_recents"
             android:title="@string/immersive_recents_title"
             android:summary="@string/immersive_recents_summary"
@@ -33,13 +33,13 @@
             android:entryValues="@array/immersive_recents_values"
             android:persistent="false" />
 
-          <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
             android:key="show_clear_all_recents"
             android:title="@string/show_clear_all_recents_button_title"
             android:summary="@string/show_clear_all_recents_button_summary"
             android:defaultValue="true" />
 
-         <ListPreference
+        <ListPreference
             android:key="recents_clear_all_location"
             android:title="@string/recents_clear_all_location_title"
             android:entries="@array/recents_clear_all_location_entries"
@@ -72,7 +72,7 @@
             android:key="slim_recents"
             android:title="@string/slim_recents_title">
 
-         <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        <SwitchPreference
             android:key="use_slim_recents"
             android:title="@string/use_slim_recents_title"
             android:summary="@string/use_slim_recents_summary"
