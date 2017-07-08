@@ -550,6 +550,12 @@
 
     <string name="navbar_buttons_alpha_title">Button transparency</string>
 
+    <string name="smartbar_longpress_delay_title">Button longpress delay</string>
+    <string name="smartbar_longpress_delay_summary">Set how long the system will wait before triggering a longpress action</string>
+    <string name="smartbar_longpress_delay_default">Default delay (fast)</string>
+    <string name="smartbar_longpress_delay_normal">Normal delay</string>
+    <string name="smartbar_longpress_delay_long">Long delay</string>
+
     <!-- Hardware button navigation -->
     <string name="hardware_keys_volume_keys_title">Volume rocker</string>
     <string name="hardware_keys_home_key_title">Home button</string>
