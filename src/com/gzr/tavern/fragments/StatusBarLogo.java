@@ -33,6 +33,7 @@ import android.widget.LinearLayout;
 import com.android.settings.R;
 import com.gzr.tavern.preference.CustomSeekBarPreference;
 import com.android.settings.SettingsPreferenceFragment;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import java.util.ArrayList;
@@ -43,17 +44,20 @@ public class StatusBarLogo extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String TAG = "StatusBarLogo";
+    static final int COLOR_TIPSY = 0xfff1d744;
 
     private LinearLayout mView;
 
     private static final String STATUS_BAR_LOGO_POSITION = "status_bar_logo_position";
     private static final String STATUS_BAR_LOGO_STYLE = "status_bar_logo_style";
     private static final String STATUS_BAR_LOGO_LOCATION = "status_bar_logo_location";
+    private static final String STATUS_BAR_LOGO_COLOR = "status_bar_logo_color";
     private static final String STATUS_BAR_LOGO_SIZE = "status_bar_logo_size";
 
     private ListPreference mStatusBarLogoPosition;
     private ListPreference mStatusBarLogoStyle;
     private ListPreference mStatusBarLogoLoc;
+    private ColorPickerPreference mStatusBarLogoColor;
     private CustomSeekBarPreference mStatusBarLogoSize;
 
     @Override
@@ -61,6 +65,9 @@ public class StatusBarLogo extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.status_bar_logo);
+
+        int intColor;
+        String hexColor;
 
         ContentResolver resolver = getActivity().getContentResolver();
         mStatusBarLogoPosition = (ListPreference) findPreference(STATUS_BAR_LOGO_POSITION);
@@ -86,6 +93,14 @@ public class StatusBarLogo extends SettingsPreferenceFragment
         mStatusBarLogoLoc.setValue(String.valueOf(logoLoc));
         mStatusBarLogoLoc.setSummary(mStatusBarLogoLoc.getEntry());
         mStatusBarLogoLoc.setOnPreferenceChangeListener(this);
+
+        mStatusBarLogoColor = (ColorPickerPreference) findPreference(STATUS_BAR_LOGO_COLOR);
+        mStatusBarLogoColor.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(resolver,
+                    Settings.System.STATUS_BAR_TIPSY_LOGO_COLOR, COLOR_TIPSY);
+        hexColor = String.format("#%08x", (COLOR_TIPSY & intColor));
+        mStatusBarLogoColor.setSummary(hexColor);
+        mStatusBarLogoColor.setNewPreviewColor(intColor);
 
         mStatusBarLogoSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_LOGO_SIZE);
         mStatusBarLogoSize.setValue(Settings.System.getInt(resolver,
@@ -126,6 +141,14 @@ public class StatusBarLogo extends SettingsPreferenceFragment
             mStatusBarLogoLoc.setSummary(
                     mStatusBarLogoLoc.getEntries()[index]);
             return true;
+        } else if (preference == mStatusBarLogoColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_TIPSY_LOGO_COLOR, intHex);
+            return true;
         } else if (preference == mStatusBarLogoSize) {
             int width = ((Integer)newValue).intValue();
             Settings.System.putInt(resolver,
@@ -140,10 +163,12 @@ public class StatusBarLogo extends SettingsPreferenceFragment
             Settings.System.STATUS_BAR_TIPSY_LOGO_POSITION, 0) == 0) {
             mStatusBarLogoStyle.setEnabled(false);
             mStatusBarLogoLoc.setEnabled(false);
+            mStatusBarLogoColor.setEnabled(false);
             mStatusBarLogoSize.setEnabled(false);
         } else {
             mStatusBarLogoStyle.setEnabled(true);
             mStatusBarLogoLoc.setEnabled(true);
+            mStatusBarLogoColor.setEnabled(true);
             mStatusBarLogoSize.setEnabled(true);
 
         }
