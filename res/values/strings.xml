@@ -82,5 +82,6 @@
     <string name="status_bar_logo_title">Tipsy logo</string>
     <string name="status_bar_logo_summary">Enable to show Tipsy logo on statusbar</string>
     <string name="status_bar_logo_style_title">Tipsy logo style</string>
+    <string name="status_bar_logo_color_title">Select color</string>
 
 </resources>
