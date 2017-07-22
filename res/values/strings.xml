@@ -645,6 +645,7 @@
     <string name="status_bar_logo_title">Tipsy Logo</string>
     <string name="status_bar_logo_position_title">Logo</string>
     <string name="status_bar_logo_style_title">Logo style</string>
+    <string name="status_bar_logo_color_title">Select color</string>
     <string name="status_bar_logo_size_title">Logo size</string>
     <string name="status_bar_logo_location_title">Placement</string>
     <string name="status_bar_logo_location_summary">Select where the logo is shown on the statusbar</string>
