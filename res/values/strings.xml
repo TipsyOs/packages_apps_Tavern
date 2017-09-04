@@ -29,6 +29,8 @@
     <string name="smartpixels_title">Smart Pixels</string>
     <string name="statusbar_logo_title">Statusbar Logo</string>
     <string name="various_system_title">Various</string>
+    <string name="leds_title">LED Lights</string>
+    <string name="battery_light_settings">Battery charging light</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -99,4 +101,14 @@
     <string name="screen_off_animation_default">Default</string>
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
+
+    <!-- Battery light -->
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost full battery</string>
+    <string name="battery_light_reallyfull_color">Full (100) battery</string>
+
 </resources>

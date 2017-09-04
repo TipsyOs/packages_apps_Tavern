@@ -27,6 +27,11 @@
         android:title="@string/batterybar_title"/>
 
     <Preference
+        android:key="leds"
+        android:fragment="com.gzr.tavern.fragments.LedSettings"
+        android:title="@string/leds_title" />
+
+    <Preference
         android:key="network_traffic"
         android:title="@string/network_traffic_title"
         android:fragment="com.gzr.tavern.fragments.NetworkTraffic" />
