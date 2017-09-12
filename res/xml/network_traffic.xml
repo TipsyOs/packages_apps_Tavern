@@ -17,18 +17,18 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/statusbar_category"
-    android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-        android:key="quicksettings"
-        android:title="@string/quicksettings_title"
-        android:fragment="com.gzr.tavern.fragments.QuickSettings" />
+    <com.gzr.tavern.preference.SystemSettingSwitchPreference
+        android:key="network_traffic_state"
+        android:title="@string/network_traffic_state_title"
+        android:defaultValue="true" />
 
-    <Preference
-        android:key="network_traffic"
-        android:title="@string/network_traffic_title"
-        android:fragment="com.gzr.tavern.fragments.NetworkTraffic" />
+    <com.gzr.tavern.preference.CustomSeekBarPreference
+        android:key="network_traffic_autohide_threshold"
+        android:title="@string/network_traffic_autohide_threshold_title"
+        android:max="10"
+        settings:min="0"
+        settings:units="" />
 
 </PreferenceScreen>

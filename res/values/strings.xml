@@ -31,6 +31,7 @@
     <!-- Fragments -->
     <string name="quicksettings_title">Quick settings</string>
     <string name="various_system_title">Various</string>
+    <string name="network_traffic_title">Network traffic</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -72,5 +73,9 @@
 
     <!-- QS rows and columns -->
     <string name="qs_rows_columns_title">QS rows and columns</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 
 </resources>
