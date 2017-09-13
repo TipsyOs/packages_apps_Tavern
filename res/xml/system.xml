@@ -56,4 +56,10 @@
         android:title="@string/various_system_title"
         android:fragment="com.gzr.tavern.fragments.VariousSystem" />
 
+    <com.gzr.tavern.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_power_menu_disabled"
+        android:title="@string/lockscreen_power_menu_disabled_title"
+        android:summary="@string/lockscreen_power_menu_disabled_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
