@@ -37,6 +37,11 @@
         android:fragment="com.gzr.tavern.fragments.NetworkTraffic" />
 
     <Preference
+        android:key="powermenu"
+        android:fragment="com.gzr.tavern.fragments.PowerMenu"
+        android:title="@string/powermenu_title" />
+
+    <Preference
         android:key="quicksettings"
         android:title="@string/quicksettings_title"
         android:fragment="com.gzr.tavern.fragments.QuickSettings" />
