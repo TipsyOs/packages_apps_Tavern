@@ -21,49 +21,4 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-       <PreferenceScreen
-            android:key="ledsettings"
-            android:fragment="com.gzr.wolvesden.fragments.LEDsettings"
-            android:title="@string/led_settings" />
-
-      <PreferenceScreen
-     	    android:key="daynight"
- 	    android:fragment="com.gzr.wolvesden.fragments.DayNightSettings"
- 	    android:title="@string/daynight_title"/>
-
-      <PreferenceScreen
-            android:key="custom_wall_browse"
-            android:title="@string/custom_wall_browse_title"
-            android:summary="@string/custom_wall_browse_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.omnirom.omnistyle"
-                    android:targetClass="org.omnirom.omnistyle.BrowseWallsActivity" />
-       </PreferenceScreen>
-
-       <PreferenceScreen
-            android:key="animations"
-            android:fragment="com.gzr.wolvesden.fragments.Animations"
-            android:title="@string/animations" />
-
-       <PreferenceScreen
-            android:key="blur"
-            android:fragment="com.gzr.wolvesden.fragments.BlurPersonalizations"
-            android:title="@string/settings_blur_cat" />
- 
-       <Preference
-            android:key="expanded_desktop"
-            android:fragment="com.gzr.wolvesden.fragments.ExpandedDesktop"
-            android:title="@string/expanded_desktop_category" />
-
-       <Preference
-            android:key="misctweaks"
-            android:fragment="com.gzr.wolvesden.fragments.MiscTweaks"
-            android:title="@string/misctweaks_category" />
-
-      <Preference
-            android:key="powermenu"
-            android:fragment="com.gzr.wolvesden.fragments.PowerMenu"
-            android:title="@string/powermenu_category" />
-
 </PreferenceScreen>
