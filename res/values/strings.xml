@@ -78,4 +78,8 @@
     <string name="network_traffic_state_title">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 
+    <!-- Validus statusbar logo -->
+    <string name="status_bar_logo_title">Validus logo</string>
+    <string name="status_bar_logo_summary">Enable to show Validus logo on statusbar</string>
+
 </resources>
