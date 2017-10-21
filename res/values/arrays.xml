@@ -58,4 +58,19 @@
         <item>4</item>
     </string-array>
 
+    <!-- Tipsy Logo -->
+    <string-array name="status_bar_logo_style_entries">
+        <item>Wolf Shield</item>
+        <item>GZR Skull</item>
+        <item>GZR Circle</item>
+        <item>GZR Clown</item>
+    </string-array>
+
+    <string-array name="status_bar_logo_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>
