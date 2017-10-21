@@ -64,6 +64,8 @@
         <item>GZR Skull</item>
         <item>GZR Circle</item>
         <item>GZR Clown</item>
+        <item>Running Wolf</item>
+        <item>Oreo Wolf</item>
     </string-array>
 
     <string-array name="status_bar_logo_style_values" translatable="false">
@@ -71,6 +73,8 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
+        <item>5</item>
     </string-array>
 
 </resources>
