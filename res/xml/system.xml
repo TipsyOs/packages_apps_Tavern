@@ -22,6 +22,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
+        android:key="systemui_theme_style"
+        android:fragment="com.gzr.tavern.fragments.SystemuiTheme"
+        android:title="@string/systemui_theme_style_title" />
+
+    <Preference
         android:key="batterybar"
         android:fragment="com.gzr.tavern.fragments.BatteryBarSettings"
         android:title="@string/batterybar_title"/>
