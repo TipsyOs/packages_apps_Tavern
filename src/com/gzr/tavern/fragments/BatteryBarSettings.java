@@ -89,7 +89,8 @@ public class BatteryBarSettings extends SettingsPreferenceFragment implements
 
         mBatteryBarColor = (ColorPickerPreference) findPreference(PREF_BATT_BAR_COLOR);
         mBatteryBarColor.setOnPreferenceChangeListener(this);
-        intColor = (0xffffffff);
+        intColor = Settings.System.getInt(resolver,
+                "battery_bar_color", 0xffffffff);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mBatteryBarColor.setSummary(hexColor);
         mBatteryBarColor.setNewPreviewColor(intColor);
