@@ -24,4 +24,9 @@
             android:fragment="com.gzr.tavern.fragments.BatteryBarSettings"
             android:title="@string/batterybar_title"/>
 
+    <Preference
+        android:key="smartpixel"
+        android:fragment="com.gzr.tavern.fragments.SmartPixels"
+        android:title="@string/smartpixels_title"/>
+
 </PreferenceScreen>

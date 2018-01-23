@@ -33,6 +33,7 @@
     <string name="various_system_title">Various</string>
     <string name="network_traffic_title">Network traffic</string>
     <string name="various_statusbar_title">Various</string>
+    <string name="smartpixels_title">Smart Pixels</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -84,5 +85,15 @@
     <string name="status_bar_logo_summary">Enable to show Tipsy logo on statusbar</string>
     <string name="status_bar_logo_style_title">Tipsy logo style</string>
     <string name="status_bar_logo_color_title">Select color</string>
+
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">Smart Pixels</string>
+    <string name="smart_pixels_summary">Save battery by shutting off extra pixels</string>
+    <string name="smart_pixels_enable_title">Enable Smart Pixels</string>
+    <string name="smart_pixels_enable_summary">Shut off pixels to reduce power consumption</string>
+    <string name="smart_pixels_on_power_save_title">Auto-enable on battery saver</string>
+    <string name="smart_pixels_on_power_save_summary">Enable Smart Pixels when battery saver is enabled</string>
+    <string name="smart_pixels_percent">Percent of pixels to disable</string>
+    <string name="smart_pixels_shift">Prevent burn-in by shifting pixels every</string>
 
 </resources>
