@@ -40,7 +40,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
 
     private ListPreference mLogoStyle;
     private ColorPickerPreference mStatusBarLogoColor;
-    static final int DEFAULT_LOGO_COLOR = 0xff009688;
+    static final int DEFAULT_LOGO_COLOR = 0xfff1d744;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
