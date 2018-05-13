@@ -32,6 +32,7 @@
     <string name="quicksettings_title">Quick settings</string>
     <string name="various_system_title">Various</string>
     <string name="network_traffic_title">Network traffic</string>
+    <string name="various_statusbar_title">Various</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

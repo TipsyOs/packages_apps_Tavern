@@ -31,4 +31,9 @@
         android:title="@string/network_traffic_title"
         android:fragment="com.gzr.tavern.fragments.NetworkTraffic" />
 
+    <Preference
+        android:key="various_statusbar"
+        android:title="@string/various_statusbar_title"
+        android:fragment="com.gzr.tavern.fragments.VariousStatusbar" />
+
 </PreferenceScreen>
