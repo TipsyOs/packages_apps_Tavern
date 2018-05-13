@@ -21,4 +21,9 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="various_system"
+        android:fragment="com.gzr.tavern.fragments.VariousSystem"
+        android:title="@string/various_system_title" />
+
 </PreferenceScreen>
