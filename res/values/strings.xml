@@ -29,6 +29,7 @@
     <string name="statusbar_notifications_category">Status bar notifications</string>
 
     <!-- Fragments -->
+    <string name="quicksettings_title">Quick settings</string>
     <string name="various_system_title">Various</string>
 
     <!-- Color Picker -->
@@ -69,5 +70,7 @@
     <string name="battery_bar_high_color">High level color"</string>
     <string name="battery_bar_low_color">Low level color"</string>
 
+    <!-- QS rows and columns -->
+    <string name="qs_rows_columns_title">QS rows and columns</string>
 
 </resources>

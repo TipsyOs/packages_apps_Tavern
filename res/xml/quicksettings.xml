@@ -17,13 +17,11 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/statusbar_category"
-    android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
-        android:key="quicksettings"
-        android:title="@string/quicksettings_title"
-        android:fragment="com.gzr.tavern.fragments.QuickSettings" />
+        android:key="qs_rows_columns"
+        android:fragment="com.gzr.tavern.fragments.QsRowsColumns"
+        android:title="@string/qs_rows_columns_title"/>
 
 </PreferenceScreen>
