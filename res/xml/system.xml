@@ -46,4 +46,9 @@
         android:title="@string/statusbar_logo_title"
         android:fragment="com.gzr.tavern.fragments.StatusbarLogo" />
 
+    <Preference
+        android:key="various_system"
+        android:title="@string/various_system_title"
+        android:fragment="com.gzr.tavern.fragments.VariousSystem" />
+
 </PreferenceScreen>
