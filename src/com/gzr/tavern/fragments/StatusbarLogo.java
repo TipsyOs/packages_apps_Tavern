@@ -35,7 +35,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.Utils;
 
-public class VariousStatusbar extends SettingsPreferenceFragment implements
+public class StatusbarLogo extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private ListPreference mLogoStyle;

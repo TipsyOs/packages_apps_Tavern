@@ -20,20 +20,14 @@
     <string name="tavern_summary_title">The bar</string>
 
     <!-- Tabs -->
-    <string name="system_category">System</string>
-    <string name="lockscreen_category">Lock screen</string>
-    <string name="heads_up_category">Heads up</string>
-    <string name="statusbar_category">Status bar</string>
-    <string name="navigation_category">Navigation</string>
-    <string name="multitasking_category">Multi-Tasking</string>
-    <string name="statusbar_notifications_category">Status bar notifications</string>
+    <string name="system_category">The Bar</string>
 
     <!-- Fragments -->
-    <string name="quicksettings_title">Quick settings</string>
-    <string name="various_system_title">Various</string>
+    <string name="batterybar_title">Battery bar</string>
     <string name="network_traffic_title">Network traffic</string>
-    <string name="various_statusbar_title">Various</string>
+    <string name="quicksettings_title">Quick settings</string>
     <string name="smartpixels_title">Smart Pixels</string>
+    <string name="statusbar_logo_title">Statusbar Logo</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -48,7 +42,6 @@
     <string name="qs_small_tiles_title">Small QS tiles</string>
 
     <!-- Battery Bar -->
-    <string name="batterybar_title">Battery bar</string>
     <string name="battery_icon">Battery icon style</string>
     <string name="battery_not_title">Battery icon in notifications</string>
     <string name="battery_not_summary">Battery icon will show up where the clear all button shows up</string>

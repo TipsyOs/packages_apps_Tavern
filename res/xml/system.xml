@@ -22,8 +22,28 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
-        android:key="various_system"
-        android:fragment="com.gzr.tavern.fragments.VariousSystem"
-        android:title="@string/various_system_title" />
+        android:key="batterybar"
+        android:fragment="com.gzr.tavern.fragments.BatteryBarSettings"
+        android:title="@string/batterybar_title"/>
+
+    <Preference
+        android:key="network_traffic"
+        android:title="@string/network_traffic_title"
+        android:fragment="com.gzr.tavern.fragments.NetworkTraffic" />
+
+    <Preference
+        android:key="quicksettings"
+        android:title="@string/quicksettings_title"
+        android:fragment="com.gzr.tavern.fragments.QuickSettings" />
+
+    <Preference
+        android:key="smartpixel"
+        android:fragment="com.gzr.tavern.fragments.SmartPixels"
+        android:title="@string/smartpixels_title"/>
+
+    <Preference
+        android:key="statusbar_logo"
+        android:title="@string/statusbar_logo_title"
+        android:fragment="com.gzr.tavern.fragments.StatusbarLogo" />
 
 </PreferenceScreen>

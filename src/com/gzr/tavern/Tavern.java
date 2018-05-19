@@ -40,10 +40,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.gzr.tavern.tabs.System;
-import com.gzr.tavern.tabs.Lockscreen;
-import com.gzr.tavern.tabs.StatusBar;
-import com.gzr.tavern.tabs.Navigation;
-import com.gzr.tavern.tabs.MultiTasking;
 import com.gzr.tavern.PagerSlidingTabStrip;
 import com.android.settings.R;
 import com.android.settings.dashboard.SummaryLoader;
@@ -104,10 +100,6 @@ public class Tavern  extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new System();
-            frags[1] = new Lockscreen();
-            frags[2] = new StatusBar();
-            frags[3] = new Navigation();
-            frags[4] = new MultiTasking();
         }
 
         @Override
@@ -129,11 +121,7 @@ public class Tavern  extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.system_category),
-                    getString(R.string.lockscreen_category),
-                    getString(R.string.statusbar_category),
-                    getString(R.string.navigation_category),
-                    getString(R.string.multitasking_category)};
+                    getString(R.string.system_category)};
         return titleString;
     }
 
