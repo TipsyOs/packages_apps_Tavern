@@ -57,8 +57,6 @@
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
     <string name="battery_bar_hide">Hide</string>
     <string name="battery_bar_statusbar">Statusbar</string>
-    <string name="battery_bar_topnav">Top of navbar</string>
-    <string name="battery_bar_bottomnav">Bottom of navbar</string>
     <string name="battery_bar_reg">Regular</string>
     <string name="battery_bar_center">Center-mirrored</string>
     <string name="battery_bar_reversed">Reversed</string>

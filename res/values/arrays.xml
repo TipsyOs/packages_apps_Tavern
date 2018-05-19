@@ -21,15 +21,11 @@
     <string-array name="battery_bar_entries" translatable="false">
         <item>@string/battery_bar_hide</item>
         <item>@string/battery_bar_statusbar</item>
-        <item>@string/battery_bar_topnav</item>
-        <item>@string/battery_bar_bottomnav</item>
     </string-array>
 
     <string-array name="battery_bar_values" translatable="false">
         <item>0</item>
         <item>1</item>
-        <item>2</item>
-        <item>3</item>
     </string-array>
 
     <string-array name="battery_bar_style_entries" translatable="false">
