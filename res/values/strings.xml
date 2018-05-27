@@ -112,6 +112,9 @@
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
 
+    <!-- Notification light -->
+    <string name="notification_light_settings">Notifications light</string>
+
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_power_menu_disabled_title">No power menu when locked</string>
     <string name="lockscreen_power_menu_disabled_summary">Disable power menu on secure lockscreen</string>
