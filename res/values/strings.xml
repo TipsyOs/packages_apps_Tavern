@@ -130,4 +130,9 @@
     <string name="powermenu_soundpanel">Sound Panel</string>
     <string name="powermenu_users">Users</string>
 
+    <!-- Heads up toggle -->
+    <string name="heads_up_title">Heads up</string>
+    <string name="heads_up_summary_enabled">Pop-up notifications are enabled</string>
+    <string name="heads_up_summary_disabled">Pop-up notifications are disabled</string>
+
 </resources>

@@ -25,6 +25,13 @@
         android:summary="@string/face_auto_unlock_summary"
         android:defaultValue="true" />
 
+    <com.gzr.tavern.preference.GlobalSettingSwitchPreference
+        android:key="heads_up_notifications_enabled"
+        android:title="@string/heads_up_title"
+        android:summaryOn="@string/heads_up_summary_enabled"
+        android:summaryOff="@string/heads_up_summary_disabled"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
