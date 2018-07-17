@@ -43,6 +43,7 @@ import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 public class AccentPicker extends InstrumentedDialogFragment implements OnClickListener {
 
     private static final String TAG_ACCENT_PICKER = "accent_picker";
+    private static final int BLACK_ACCENT = 21;
 
     private View mView;
 
@@ -326,6 +327,19 @@ public class AccentPicker extends InstrumentedDialogFragment implements OnClickL
             });
         }
 
+        Button tipsyAccent;
+        tipsyAccent = mView.findViewById(R.id.tipsyAccent);
+        if (tipsyAccent != null) {
+            tipsyAccent.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Settings.System.putIntForUser(resolver,
+                            Settings.System.ACCENT_PICKER, 20, mCurrentUserId);
+                    dismiss();
+                }
+            });
+        }
+
         Button blackAccent;
         blackAccent = mView.findViewById(R.id.blackAccent);
         // Change the accent picker button depending on whether or not the dark theme is applied
@@ -337,7 +351,7 @@ public class AccentPicker extends InstrumentedDialogFragment implements OnClickL
             @Override
             public void onClick(View v) {
                 Settings.System.putIntForUser(resolver,
-                        Settings.System.ACCENT_PICKER, 20, mCurrentUserId);
+                        Settings.System.ACCENT_PICKER, BLACK_ACCENT, mCurrentUserId);
                 dismiss();
             }
         });
